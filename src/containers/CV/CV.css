@@ -1,0 +1,60 @@
+.cv-row{
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.cv-row > div:first-child{
+    margin-right: 10px;
+}
+.cv-row > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+.time-career{
+    position: relative;
+}
+.time-career > span {
+    width:100px;
+    position: absolute;
+    right: 180px;
+    top: 3px;
+    box-shadow: 3px -3px 0 var(--default-color);
+    text-shadow: 3px 3px 0 var(--accent-color);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.time-education{
+    position: relative;
+}
+.time-education > span {
+    width:100px;
+    position: absolute;
+    left: 180px;
+    top: 3px;
+    box-shadow: -3px -3px 0 var(--default-color);
+    text-shadow: 3px 3px 0 var(--accent-color);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.teacher{
+    position: relative;
+}
+.teacher > img {
+    position: absolute;
+    top: 100px;
+    right: -350px;
+    width: 100px;
+    transform: rotate(20deg);
+    z-index: 10;
+    filter:drop-shadow(3px 3px 0 var(--accent-color));
+}

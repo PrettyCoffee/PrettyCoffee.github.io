@@ -1,0 +1,30 @@
+div.menu-item {
+    padding: 5px 5px 5px 5px;
+    border-bottom: 3px solid rgba(255,255,255,0);
+}
+
+div.menu-item:before {
+    content: "-";
+    padding-right: 10px;
+}
+
+div.menu-item:hover {
+    outline: 0;
+    text-shadow: 3px 3px 0 var(--accent-color2);
+    box-shadow: 3px 3px 0 var(--accent-color2);
+    border-bottom: 3px solid var(--default-color);
+    border-right: 3px solid var(--default-color);
+}
+
+.link {
+    position: relative;
+}
+.link > img {
+    height:100px;
+    position: absolute;
+    top:-80px;
+    left:130px;
+    transform: rotate(15deg);
+    filter:drop-shadow(3px 3px 0 var(--accent-color));
+    z-index: 10;
+}

@@ -1,0 +1,11 @@
+.pic1{
+    position: relative;
+}
+.pic1 > img {
+    width:200px;
+    left: 200px;
+    padding:5px;
+    position: absolute;
+    border:3px solid var(--default-color);
+    box-shadow: 3px 3px 0 var(--accent-color);
+}
