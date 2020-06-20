@@ -1,10 +1,8 @@
 import React from 'react';
 
 import "./CV.css"
-import {education_item, education, career_item, career} from "../../data/cv-data"
 
 type props = {
-    expand:boolean,
     type:string,
     title:string,
     startDate:number,
@@ -20,7 +18,7 @@ export function CVCard(props:props){
     } else {
     	style="time-career"
     }
-    var endDate = (props.endDate === undefined)? "Now" : props.endDate
+    var endDate = (props.endDate === 0)? "Now" : props.endDate
     return(
         <>
             <div className={style}><span>{props.startDate} - {endDate}</span></div>

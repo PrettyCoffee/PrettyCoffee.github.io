@@ -1,20 +1,18 @@
 .cv-row{
-    padding-top: 200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: flex-start;
     align-items: flex-start;
 }
-.cv-row > div:first-child{
-    margin-right: 10px;
+.cv-row:first-child{
+    margin-top: 100px;
 }
-.cv-row > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
+.cv-row > div.content-body, .cv-row > div.content-header{
+    margin-right:10px;
+}
+.empty-cv-card{
+    width:360px;
 }
 .time-career{
     position: relative;
@@ -22,7 +20,7 @@
 .time-career > span {
     width:100px;
     position: absolute;
-    right: 180px;
+    right: 13px;
     top: 3px;
     box-shadow: 3px -3px 0 var(--default-color);
     text-shadow: 3px 3px 0 var(--accent-color);
@@ -37,7 +35,7 @@
 .time-education > span {
     width:100px;
     position: absolute;
-    left: 180px;
+    left: 359px;
     top: 3px;
     box-shadow: -3px -3px 0 var(--default-color);
     text-shadow: 3px 3px 0 var(--accent-color);
@@ -51,10 +49,9 @@
 }
 .teacher > img {
     position: absolute;
-    top: 100px;
-    right: -350px;
+    top: -70px;
+    right: -30px;
     width: 100px;
     transform: rotate(20deg);
     z-index: 10;
-    filter:drop-shadow(3px 3px 0 var(--accent-color));
 }

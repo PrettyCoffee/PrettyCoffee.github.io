@@ -1,6 +1,7 @@
 div.menu-item {
     padding: 5px 5px 5px 5px;
     border-bottom: 3px solid rgba(255,255,255,0);
+    transition: 0.3s;
 }
 
 div.menu-item:before {
@@ -8,14 +9,12 @@ div.menu-item:before {
     padding-right: 10px;
 }
 
-div.menu-item:hover {
+div.menu-item:hover, div.menu-item:active {
     outline: 0;
-    text-shadow: 3px 3px 0 var(--accent-color2);
-    box-shadow: 3px 3px 0 var(--accent-color2);
-    border-bottom: 3px solid var(--default-color);
-    border-right: 3px solid var(--default-color);
+    text-shadow: 5px 5px 0 var(--accent-color), -5px -5px 0 var(--accent-color2);
+    box-shadow: 3px 3px 0 var(--accent-color), -3px -3px 0 var(--accent-color2);
+    transition: 0.3s;
 }
-
 .link {
     position: relative;
 }
@@ -25,6 +24,5 @@ div.menu-item:hover {
     top:-80px;
     left:130px;
     transform: rotate(15deg);
-    filter:drop-shadow(3px 3px 0 var(--accent-color));
     z-index: 10;
 }

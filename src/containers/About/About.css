@@ -1,11 +1,36 @@
-.pic1{
+.pic-r{
     position: relative;
 }
-.pic1 > img {
+.pic-r > img {
     width:200px;
-    left: 200px;
+    left: 355px;
     padding:5px;
     position: absolute;
     border:3px solid var(--default-color);
     box-shadow: 3px 3px 0 var(--accent-color);
+}
+.pic-l{
+    position: relative;
+}
+.pic-l > img {
+    width:200px;
+    right: 355px;
+    padding:5px;
+    position: absolute;
+    border:3px solid var(--default-color);
+    box-shadow: 3px 3px 0 var(--accent-color);
+}
+.link-to{
+    padding: 5px;
+    margin-top:5px;
+}
+.link-to:hover{
+    text-shadow: 3px 3px 0 var(--accent-color), -3px -3px 0 var(--accent-color2);
+    transition: 0.3s;
+}
+h2 > .h2-icon{
+    font-size: 15pt;
+}
+.content-body-me{
+    min-height:170px;
 }

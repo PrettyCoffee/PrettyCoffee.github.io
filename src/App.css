@@ -21,18 +21,36 @@ a, a:visited, a:active {
 }
 h1, h2{
 	text-shadow: 3px 3px 0 var(--accent-color);
+	filter:drop-shadow(3px 3px 0 var(--accent-color));
+	transition: 0.3s;
 }
 h2{
     margin:0px;
 }
 h1:hover, h2:hover{
 	text-shadow: -3px -3px 0 var(--accent-color2);
+	filter:drop-shadow(-3px -3px 0 var(--accent-color2));
+}
+img{
+	filter:drop-shadow(3px 3px 0 var(--accent-color));
+	transition: 0.3s;
 }
 img:hover{
 	filter:drop-shadow(-3px -3px 0 var(--accent-color2));
 }
 
-/* Main Wrapper */
+/* Mein Wrapper */
+.body-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+	height:100%;
+	width:100%;
+}
+/* Content Wrapper */
 .content-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -63,14 +81,34 @@ img:hover{
 .content-body{
 	padding: 20px 20px 20px 20px;
 }
-
 .back{
-	position: fixed;
+	position: absolute;
 	top:30px;
 	right:50px;
 	font-size: 25pt;
 	color:var(--default-color);
+	transition:.3s;
 }
 .back:hover{
-	text-shadow: -3px 3px 0 var(--accent-color), 3px -3px 0 var(--accent-color2);
+	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
+}
+
+div.icon-container{
+	width:300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	z-index: 1000;
+	margin:20px 0px 20px 0px;
+}
+div.icon-container > a{
+	font-size: 30pt;
+	margin-right: 20px;
+	transition:.3s;
+}
+
+div.icon-container > a:hover{
+	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
 }

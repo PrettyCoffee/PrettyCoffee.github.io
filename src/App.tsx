@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUndoAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithubAlt, faGitlab } from '@fortawesome/free-brands-svg-icons'
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,17 @@ import "./App.css"
 export default function App() {
 	return (
 		<div className="content-wrapper">
+			<div className="icon-container">
+				<a href="MailTo:prettycoffee@protonmail.com">
+					<FontAwesomeIcon  icon={faEnvelope}/>
+				</a>
+				<a href="https://github.com/PrettyCoffee">
+					<FontAwesomeIcon  icon={faGithubAlt}/>
+				</a>
+				<a href="https://gitlab.com/PrettyCoffee">
+					<FontAwesomeIcon  icon={faGitlab}/>
+				</a>
+			</div>
 			<Router>
 				<Switch >
 					<Route path="/designs">
@@ -39,7 +51,7 @@ export default function App() {
 						<Home />
 					</Route>
 				</Switch>
-				<Link to="/"><div className="back"><FontAwesomeIcon icon={faUndoAlt}/></div></Link>
+				<Link to="/"><div className="back"><FontAwesomeIcon icon={faHome}/></div></Link>
 			</Router>
 		</div>
 	);
