@@ -20,6 +20,8 @@ export function Project(project:project){
     var latest = new Date(project.lastUpdate)
     var projectYear:string = (created.getFullYear() === latest.getFullYear())?created.getFullYear()+"":created.getFullYear() + "-" + latest.getFullYear()
 
+    var description = (project.description.length > 77)?project.description.slice(0,77)+"...":project.description
+
     var tags:JSX.Element[] = []
     project.tags.forEach(tag => {
         tags.push(
@@ -36,7 +38,9 @@ export function Project(project:project){
                 <div className="project-details">
                     <h2>{project.name}</h2>
                     <div className="tag-container">{tags}</div>
-                    <p className="project-description">{project.description}</p>
+                    <p className="project-description">
+                        {(project.description !== "")?description:"No description available"}
+                    </p>
                     <a className="project-button" href={project.url}>Go to Project <FontAwesomeIcon icon={faArrowRight}/></a>
                 </div>
             </div>

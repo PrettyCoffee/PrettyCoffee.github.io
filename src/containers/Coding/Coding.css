@@ -14,7 +14,7 @@ div.content-header.coding-header{
     padding:10px;
     border:3px solid var(--default-color);
     box-shadow: 3px 3px 0 var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     transition: 0.3s;
 }
 div.project-image{
