@@ -31,6 +31,8 @@ export function Project(project:project){
         )
     });
     return(
+            //Todo:Dropdown mit Sortiermöglichkeiten
+            //<div>latest change: {latest.toLocaleDateString('en-US')}</div>
         <>
             <div className="time-project"><span>{projectYear}</span></div>
             <div className="project-container">
@@ -47,5 +49,4 @@ export function Project(project:project){
         </>
     )
 }
-//<div>latest change: {latest.toLocaleDateString('en-US')}</div>
 export default Project

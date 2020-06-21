@@ -34,21 +34,27 @@ export function About(props:any){
             <div className="content-body content-body-me">
                 <h2>Sports <FontAwesomeIcon className="h2-icon" icon={faDumbbell}/></h2>
                 <p>
-                    {"//TODO: Write something"}
+                In my opinion, sport is important for mental health and the body itself.<br/>
+                That's one of the reasons why I do both bouldering and climbing - besides my little obsession of it.
                 </p>
             </div>
             <div className="pic-r"><img alt="" src={darksouls}/></div>
             <div className="content-body content-body-me">
-                <h2>Games <FontAwesomeIcon className="h2-icon" icon={faGamepad}/></h2>
+                <h2>Videogames <FontAwesomeIcon className="h2-icon" icon={faGamepad}/></h2>
                 <p>
-                    {"//TODO: Write something"}
+                Videogames are a great hobby to calm and train your mind. <br/>
+                Besides Action-RPGs like Dark Souls I am also playing Rythm games like Beat-Saber. And much more of course if there is enough spare time left!
                 </p>
             </div>
             <div className="pic-l"><img alt="" src={music}/></div>
             <div className="content-body content-body-me">
                 <h2>Music I <FontAwesomeIcon className="h2-icon" icon={faHeart}/></h2>
                 <p>
-                    {"//TODO: Write something"}
+                    I am always listening to music since it always fits in every mood. I have been jumping between many genres the last years. To name some of them:<br/><br/>
+                    - Doom/Black Metal<br/>
+                    - Lofi Hip-Hop<br/>
+                    - Videogame Soundtracks<br/>
+                    - Speedcore<br/>
                 </p>
             </div>
         </div>
