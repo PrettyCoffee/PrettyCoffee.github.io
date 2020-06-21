@@ -28,6 +28,7 @@ export function About(props:any){
                     {Math.floor(age)} years old<br/>
                     B.Sc. Informatics<br/>
                     Web-Developer<br/>
+                    German | English<br/>
                 </p>
             </div>
             <div className="pic-l"><img alt="" src={fitness}/></div>
@@ -50,7 +51,7 @@ export function About(props:any){
             <div className="content-body content-body-me">
                 <h2>Music I <FontAwesomeIcon className="h2-icon" icon={faHeart}/></h2>
                 <p>
-                    I am always listening to music since it always fits in every mood. I have been jumping between many genres the last years. To name some of them:<br/><br/>
+                    I am always listening to music since it always fits in every mood. I have been jumping between many genres the last years. To name some of them:<br/>
                     - Doom/Black Metal<br/>
                     - Lofi Hip-Hop<br/>
                     - Videogame Soundtracks<br/>

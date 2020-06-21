@@ -5,6 +5,9 @@ import "./Home.css"
 import swlink from "../../ressources/sw-link.png" 
 
 export function Home(props:any){
+    //Todo: Colorpicker für eigene Farben und in Local Storage
+    //let root = document.documentElement;
+    //root.style.setProperty('--bg-color', 'rgba(46,46,46,255)');
     return(
         <>
             <div className="link"><img alt="" src={swlink}/></div>

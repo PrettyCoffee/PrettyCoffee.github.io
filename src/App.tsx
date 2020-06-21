@@ -1,12 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithubAlt, faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { faGithubAlt, faGitlab, faXing } from '@fortawesome/free-brands-svg-icons'
+import ToastContainer from 'react-toastify'
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
 } from "react-router-dom";
 
 //My Sites
@@ -25,6 +26,9 @@ export default function App() {
 			<div className="icon-container">
 				<a href="MailTo:jonathan-holz@outlook.com">
 					<FontAwesomeIcon  icon={faEnvelope}/>
+				</a>
+				<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
+					<FontAwesomeIcon  icon={faXing}/>
 				</a>
 				<a href="https://github.com/PrettyCoffee">
 					<FontAwesomeIcon  icon={faGithubAlt}/>

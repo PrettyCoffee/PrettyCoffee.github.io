@@ -98,6 +98,22 @@ p.project-description{
     width:100%;
 }
 
+.coding-sort{
+    width:526px;
+    margin-bottom: 10px;
+    filter: drop-shadow(3px 3px 0 var(--accent-color));
+    z-index: 200;
+    color:var(--bg-color)
+}
+
+.Toastify__toast--dark{
+    border: 4px solid var(--accent-color);
+    background-color: var(--bg-color);
+}
+.Toastify__progress-bar--dark{
+    background: var(--accent-color2);
+}
+
 @media only screen and (max-width: 800px) {
     .time-project{
         position: static;
