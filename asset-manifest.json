@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.528afa98.chunk.css",
-    "main.js": "/static/js/main.106f4a07.chunk.js",
-    "main.js.map": "/static/js/main.106f4a07.chunk.js.map",
+    "main.css": "/static/css/main.dbc522fe.chunk.css",
+    "main.js": "/static/js/main.8b9e3b86.chunk.js",
+    "main.js.map": "/static/js/main.8b9e3b86.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.2d70c9d8.chunk.js": "/static/js/2.2d70c9d8.chunk.js",
-    "static/js/2.2d70c9d8.chunk.js.map": "/static/js/2.2d70c9d8.chunk.js.map",
+    "static/js/2.178516f3.chunk.js": "/static/js/2.178516f3.chunk.js",
+    "static/js/2.178516f3.chunk.js.map": "/static/js/2.178516f3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1c405468361f64bef118a24cc437c696.js": "/precache-manifest.1c405468361f64bef118a24cc437c696.js",
+    "precache-manifest.e2afbdc46dece1b45a3ac8f6e06a3f53.js": "/precache-manifest.e2afbdc46dece1b45a3ac8f6e06a3f53.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.528afa98.chunk.css.map": "/static/css/main.528afa98.chunk.css.map",
-    "static/js/2.2d70c9d8.chunk.js.LICENSE.txt": "/static/js/2.2d70c9d8.chunk.js.LICENSE.txt",
+    "static/css/main.dbc522fe.chunk.css.map": "/static/css/main.dbc522fe.chunk.css.map",
+    "static/js/2.178516f3.chunk.js.LICENSE.txt": "/static/js/2.178516f3.chunk.js.LICENSE.txt",
     "static/media/Teacher.png": "/static/media/Teacher.6752dc20.png",
-    "static/media/dark-souls-effect.png": "/static/media/dark-souls-effect.e6e64de6.png",
-    "static/media/fitness-effect.png": "/static/media/fitness-effect.b71852a8.png",
-    "static/media/me-effect.png": "/static/media/me-effect.fadbe983.png",
-    "static/media/music-effect.png": "/static/media/music-effect.a6852605.png",
+    "static/media/dark-souls.png": "/static/media/dark-souls.b8ba2264.png",
+    "static/media/default-icon.png": "/static/media/default-icon.28517636.png",
+    "static/media/fitness.png": "/static/media/fitness.8b353ff9.png",
+    "static/media/me.png": "/static/media/me.093920a7.png",
+    "static/media/music.png": "/static/media/music.dbdca655.png",
     "static/media/sw-link.png": "/static/media/sw-link.40aaf72f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.2d70c9d8.chunk.js",
-    "static/css/main.528afa98.chunk.css",
-    "static/js/main.106f4a07.chunk.js"
+    "static/js/2.178516f3.chunk.js",
+    "static/css/main.dbc522fe.chunk.css",
+    "static/js/main.8b9e3b86.chunk.js"
   ]
 }
