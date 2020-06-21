@@ -1,3 +1,6 @@
+.content-header.cv-mobile-header{
+    display:none;
+}
 .cv-row{
     display: flex;
     flex-direction: row;
@@ -54,4 +57,50 @@
     width: 100px;
     transform: rotate(20deg);
     z-index: 10;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .cv-row:first-child{
+        margin-top: 10px;
+    }
+    .content-header.cv-desktop-header{
+        display:none;
+    }
+    .content-header.cv-mobile-header{
+        display:block;
+        z-index: 100;
+    }
+    .teacher > img{
+        top: -170px;
+    }
+    .cv-row{
+        display: block;
+        z-index: 100;
+    }
+    .time-education > span, .time-career > span {
+        width:100px;
+        position: absolute;
+        left: -109px;
+        top: 3px;
+        box-shadow: 3px -3px 0 var(--default-color);
+        text-shadow: 3px 3px 0 var(--accent-color);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .teacher > img{
+        display:none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .time-education > span, .time-career > span {
+        position: static;
+        box-shadow: 0px 0px 0 ;
+        text-shadow: 0px 0px 0 ;
+    }
 }

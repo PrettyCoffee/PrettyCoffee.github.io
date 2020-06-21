@@ -46,10 +46,7 @@ export function CV(props:any){
     let curEdu = 0
     let curCar = 0
     for (;true;) {
-        console.log({"curEdu":curEdu,"lenEdu":education.length,"curCar":curCar,"lenCar":career.length,})
-        //console.log({"a":education[curEdu]?.endDate,"b":career[curCar]?.endDate})
         if (education[curEdu] && career[curCar] && education[curEdu].endDate === career[curCar].endDate) {
-            console.log(1)
             rows.push(
                 <div className="cv-row">
                     {renderCareerElem(career[curCar])}
@@ -59,9 +56,9 @@ export function CV(props:any){
             curEdu++
             curCar++
         } else {
-            //console.log(education[curEdu])
-            if (!education[curEdu] || career[curCar] && (career[curCar].endDate > education[curEdu]?.endDate || career[curCar].endDate === 0)) {
-                console.log(2)
+            if (!education[curEdu]
+                || career[curCar].endDate === 0
+                || (career[curCar] && career[curCar].endDate > education[curEdu]?.endDate)) {
                 rows.push(
                     <div className="cv-row">
                         {renderCareerElem(career[curCar])}
@@ -70,7 +67,6 @@ export function CV(props:any){
                 )
                 curCar++
             } else if (education[curEdu]) {
-                console.log(3)
                 rows.push(
                     <div className="cv-row">
                         <span className="empty-cv-card"></span>
@@ -80,22 +76,23 @@ export function CV(props:any){
                 curEdu++
             }
         }
-        //console.log([curEdu, curCar])
         if (curEdu === education.length && curCar === career.length) {
             break;
         }
     }
-    console.log(rows)
 
     return(
         <>
             <div className="cv-content">
                 <div className="cv-row">
-                    <div className="content-header">
+                    <div className="content-header cv-desktop-header">
                         <h1>Career</h1>
                     </div>
-                    <div className="content-header">
+                    <div className="content-header cv-desktop-header">
                         <h1>Education</h1>
+                    </div>
+                    <div className="content-header cv-mobile-header">
+                        <h1>{"Career|Education"}</h1>
                     </div>
                     <div className="teacher"><img alt="" src={teacher}/></div>
                 </div>

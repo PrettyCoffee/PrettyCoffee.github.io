@@ -23,7 +23,7 @@ export default function App() {
 	return (
 		<div className="content-wrapper">
 			<div className="icon-container">
-				<a href="MailTo:prettycoffee@protonmail.com">
+				<a href="MailTo:jonathan-holz@outlook.com">
 					<FontAwesomeIcon  icon={faEnvelope}/>
 				</a>
 				<a href="https://github.com/PrettyCoffee">

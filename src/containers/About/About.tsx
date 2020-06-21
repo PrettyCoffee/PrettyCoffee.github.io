@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faPortrait, faGamepad, faDumbbell } from '@fortawesome/free-solid-svg-icons'
 
 import "./About.css"
-import me from "../../ressources/me-effect.png"
-import fitness from "../../ressources/fitness-effect.png"
-import darksouls from "../../ressources/dark-souls-effect.png"
-import bouldering from "../../ressources/bouldering-effect.png"
-import music from "../../ressources/music-effect.png"
+import me from "../../ressources/me.png"
+import fitness from "../../ressources/fitness.png"
+import darksouls from "../../ressources/dark-souls.png"
+//import bouldering from "../../ressources/bouldering.png"
+import music from "../../ressources/music.png"
 
 
 export function About(props:any){
@@ -17,7 +17,7 @@ export function About(props:any){
     //let age = Math.floor(new Date() - birthday)
     return(
         <div>
-            <div className="content-header">
+            <div className="content-header content-header-me">
                 <h1>About Me</h1>
             </div>
             <div className="pic-r"><img alt="" src={me}/></div>

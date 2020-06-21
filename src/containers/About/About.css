@@ -34,3 +34,36 @@ h2 > .h2-icon{
 .content-body-me{
     min-height:170px;
 }
+
+@media only screen and (max-width: 850px) {
+    .content-header.content-header-me,
+    .content-body.content-body-me{
+        margin-left: 200px;
+    }
+    .pic-r > img {
+        right: 355px;
+        left: unset;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .pic-r, .pic-l {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .pic-r > img, .pic-l > img {
+        width: 330px;
+        position: static;
+        right: unset;
+        left: unset;
+        display: flex;
+        
+    }
+    .content-header.content-header-me,
+    .content-body.content-body-me{
+        margin-left: 0px;
+    }
+}
