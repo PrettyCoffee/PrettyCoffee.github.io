@@ -37,6 +37,10 @@ img{
 img:hover{
 	filter:drop-shadow(-3px -3px 0 var(--accent-color2));
 }
+p{
+	margin:5px 0px 0px 0px;
+	font-size: 11pt;
+}
 
 /* Mein Wrapper */
 .body-wrapper {
@@ -78,7 +82,7 @@ img:hover{
 	align-items: center;
 }
 .content-body{
-	padding: 20px 20px 20px 20px;
+	padding: 15px 20px 15px 20px;
 }
 .back{
 	position: absolute;

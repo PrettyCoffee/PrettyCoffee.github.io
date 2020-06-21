@@ -7,7 +7,6 @@
     padding:5px;
     position: absolute;
     border:3px solid var(--default-color);
-    box-shadow: 3px 3px 0 var(--accent-color);
 }
 .pic-l{
     position: relative;
@@ -18,7 +17,6 @@
     padding:5px;
     position: absolute;
     border:3px solid var(--default-color);
-    box-shadow: 3px 3px 0 var(--accent-color);
 }
 .link-to{
     padding: 5px;
@@ -32,7 +30,10 @@ h2 > .h2-icon{
     font-size: 15pt;
 }
 .content-body-me{
-    min-height:170px;
+    min-height:180px;
+}
+.content-body-me:last-child{
+    margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 850px) {

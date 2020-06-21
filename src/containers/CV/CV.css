@@ -11,6 +11,9 @@
 .cv-row:first-child{
     margin-top: 100px;
 }
+.cv-row:last-child{
+    margin-bottom: 100px;
+}
 .cv-row > div.content-body, .cv-row > div.content-header{
     margin-right:10px;
 }

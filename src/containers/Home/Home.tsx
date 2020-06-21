@@ -16,7 +16,7 @@ export function Home(props:any){
                 <Link to="/about"><div className="menu-item">About Me</div></Link>
                 <Link to="/CV"><div className="menu-item">CV</div></Link>
                 <Link to="/coding"><div className="menu-item">Coding</div></Link>
-                <Link to="/designs"><div className="menu-item">Designs</div></Link>
+                <Link to="/designs"><div className="menu-item">Designs (Work in Progress)</div></Link>
             </div>
         </>
     )

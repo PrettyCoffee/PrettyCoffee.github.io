@@ -17,6 +17,9 @@ div.content-header.coding-header{
     margin-bottom: 10px;
     transition: 0.3s;
 }
+.project-container:last-child{
+    margin-bottom: 100px;
+}
 div.project-image{
     width:150px; 
     height:150px; 
@@ -91,7 +94,6 @@ div.project-details > a.project-button:hover{
 
 p.project-description{
     overflow: hidden;
-    font-size: 11pt;
     height:400px;
     width:100%;
 }
