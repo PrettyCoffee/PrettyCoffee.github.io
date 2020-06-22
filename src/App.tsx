@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGitlab, faXing } from '@fortawesome/free-brands-svg-icons'
-import ToastContainer from 'react-toastify'
+import {ToastContainer, toast} from 'react-toastify'
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -17,13 +17,16 @@ import CV from "./containers/CV/CV"
 import Coding from "./containers/Coding/Coding"
 import Designs from "./containers/Designs/Designs"
 
+
 //My Styles
 import "./App.css"
 
 export default function App() {
 	return (
 		<div className="content-wrapper">
+			<Router>
 			<div className="icon-container">
+				<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
 				<a href="MailTo:jonathan-holz@outlook.com">
 					<FontAwesomeIcon  icon={faEnvelope}/>
 				</a>
@@ -37,7 +40,6 @@ export default function App() {
 					<FontAwesomeIcon  icon={faGitlab}/>
 				</a>
 			</div>
-			<Router>
 				<Switch >
 					<Route path="/designs">
 						<Designs />
@@ -55,7 +57,6 @@ export default function App() {
 						<Home />
 					</Route>
 				</Switch>
-				<Link to="/"><div className="back"><FontAwesomeIcon icon={faHome}/></div></Link>
 			</Router>
 		</div>
 	);

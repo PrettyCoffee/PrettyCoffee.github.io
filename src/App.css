@@ -26,16 +26,9 @@ h1, h2{
 h2{
     margin:0px;
 }
-h1:hover, h2:hover{
-	text-shadow: -3px -3px 0 var(--accent-color2);
-	filter:drop-shadow(-3px -3px 0 var(--accent-color2));
-}
 img{
 	filter:drop-shadow(3px 3px 0 var(--accent-color));
 	transition: 0.3s;
-}
-img:hover{
-	filter:drop-shadow(-3px -3px 0 var(--accent-color2));
 }
 p{
 	margin:5px 0px 0px 0px;
@@ -84,17 +77,6 @@ p{
 .content-body{
 	padding: 15px 20px 15px 20px;
 }
-.back{
-	position: absolute;
-	top:20px;
-	right:50px;
-	font-size: 30pt;
-	color:var(--default-color);
-	transition:.3s;
-}
-.back:hover{
-	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
-}
 
 div.icon-container{
 	width:10px;
@@ -109,19 +91,35 @@ div.icon-container{
 div.icon-container > a:first-child{
 	margin-left: 0px;
 }
+div.icon-container > a:nth-child(2){
+	margin-left: 0px;
+}
 div.icon-container > a{
 	font-size: 30pt;
 	margin-left: 20px;
 	transition:.3s;
 }
-
 div.icon-container > a:hover{
 	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
 }
 
+.back{
+	position: absolute;
+	top:20px;
+	left:50px;
+	color:var(--default-color);
+	transition:.3s;
+}
+.back:hover{
+	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
+}
 
-@media only screen and (max-width: 550px) {
-    .back{
-		right:20px;
+
+@media only screen and (max-width: 650px) {
+	.back{
+		position: static;
+	}
+	div.icon-container > a:nth-child(2){
+		margin-left: 20px;
 	}
 }

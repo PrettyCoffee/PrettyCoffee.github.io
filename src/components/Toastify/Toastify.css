@@ -1,0 +1,7 @@
+.Toastify__toast--dark{
+    border: 4px solid var(--accent-color);
+    background-color: var(--bg-color);
+}
+.Toastify__progress-bar--dark{
+    background: var(--accent-color2);
+}

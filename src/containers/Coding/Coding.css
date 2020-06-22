@@ -106,14 +106,6 @@ p.project-description{
     color:var(--bg-color)
 }
 
-.Toastify__toast--dark{
-    border: 4px solid var(--accent-color);
-    background-color: var(--bg-color);
-}
-.Toastify__progress-bar--dark{
-    background: var(--accent-color2);
-}
-
 @media only screen and (max-width: 800px) {
     .time-project{
         position: static;
@@ -128,7 +120,7 @@ p.project-description{
         display:block;
     }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     div.content-header.coding-header{
         width:300px
     }

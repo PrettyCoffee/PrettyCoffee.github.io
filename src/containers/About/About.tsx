@@ -44,7 +44,7 @@ export function About(props:any){
                 <h2>Videogames <FontAwesomeIcon className="h2-icon" icon={faGamepad}/></h2>
                 <p>
                 Videogames are a great hobby to calm and train your mind. <br/>
-                Besides Action-RPGs like Dark Souls I am also playing Rythm games like Beat-Saber. And much more of course if there is enough spare time left!
+                Besides ARPGs like Dark Souls I am also playing rythm games like Beat-Saber. And much more of course if there is enough spare time left!
                 </p>
             </div>
             <div className="pic-l"><img alt="" src={music}/></div>

@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {Toastify, toastAction} from "../../components/Toastify/Toastify"
 
 import Project from "./Project"
 import "./Coding.css"
 
-const options = [
-  { value: 'chgUp',     label: 'Latest Change' },
-  { value: 'crtUp',     label: 'Newest Created' },
-  { value: 'crtDown',   label: 'Oldest Created' },
-]
-/*
-<select className="coding-sort" name="Sort By" id="cars">
-</select>
-*/
 type project = {
     img:string,
     name:string,
@@ -25,6 +15,11 @@ type project = {
     tags:string[],
 }
 
+const options = [
+    { value: 'chgUp',     label: 'latest change' },
+    { value: 'crtUp',     label: 'newest created' },
+    { value: 'crtDown',   label: 'oldest created' },
+]
 /*
 Gthub Repo:
     https://api.github.com/repos/PrettyCoffee/PrettyCoffee.github.io
@@ -35,7 +30,6 @@ Get Content of Repo:
 const githubRepositories = [
     "PrettyCoffee/PrettyCoffee.github.io",
 ]
-
 const gitlabRepositories = [
     "14827017",
     "14252893",
@@ -43,9 +37,8 @@ const gitlabRepositories = [
 ]
 
 export function Coding(props:any){
-    //let projects:project[] = []
     const [projects]:project[] | any = useState([]);
-    const [currSort, setCurrSort]:any = useState(options[0].value);
+    const [currSort, setCurrSort]:any = useState(options[0]);
     const [reload, setReload]:boolean | any = useState(true);
     const [projectsJSX, setProjectsJSX]:JSX.Element[] | any = useState(["abc", "1223"]);
     
@@ -66,24 +59,8 @@ export function Coding(props:any){
                     lastUpdate: result.last_activity_at,
                     tags:       (result.tag_list)?result.tag_list:[],
                 })
-                /*
-                setProjects(...projects,{
-                    img:        result.avatar_url,
-                    name:       result.name,
-                    description:result.description,
-                    url:        result.web_url,
-                    created:    result.created_at,
-                    lastUpdate: result.last_activity_at,
-                    tags:       result.tag_list,
-                })
-                */
-                projects.sort(sortProjects)
                 setReload(true)
-            },
-                (error) => {
-                    //Todo: Create error handling 
-                }
-            )    
+            })
         });
         githubRepositories.forEach(githubRep => {
             fetch("https://api.github.com/repos/"+githubRep,{
@@ -105,43 +82,34 @@ export function Coding(props:any){
                 })
                 projects.sort(sortProjects)
                 setReload(true)
-            },
-                (error) => {
-                    //Todo: Create error handling 
-                }
-            )    
+            })    
         });
     },[]);
 
-    var sort = (options:any) => {
-        toast.dark('Sorted by '+options.label+'!', {
-            position: "top-left",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            progress: undefined,
-        });
-        setCurrSort(options.value)
-        projects.sort(sortProjects)
+    var reloadProjects = (options:any) => {
+        toastAction('Sorted by '+options.label)
+        setCurrSort(options)
         setReload(true)
     }
     var sortProjects = (a:project,b:project) => {
-        switch (currSort){
+        let result:number = 1
+        switch (currSort.value){
             case options[0].value:
-                return new Date(b.lastUpdate).getTime() - new Date(a.lastUpdate).getTime()
+                result = new Date(b.lastUpdate).getTime() - new Date(a.lastUpdate).getTime()
+            break
             case options[1].value:
-                return new Date(b.created).getTime() - new Date(a.created).getTime()
+                result = new Date(b.created).getTime() - new Date(a.created).getTime()
+            break
             case options[2].value:
-                return new Date(a.created).getTime() - new Date(b.created).getTime()
+                result = new Date(a.created).getTime() - new Date(b.created).getTime()
         }
+        return result
     }
 
     //Update jsx if project is added
     useEffect(() => {
         if(projects !== undefined && reload === true) {
-            console.log(currSort)
+            projects.sort(sortProjects)
             var tmpPrj:JSX.Element[] = []
             projects.forEach((prj:project) => {
                 tmpPrj.push(
@@ -153,32 +121,21 @@ export function Coding(props:any){
             setReload(false)
             setProjectsJSX([...tmpPrj])
         }
-    }, [reload, projects, projectsJSX, currSort])
+    }, [reload])
     
     return(
         <>
-            <ToastContainer
-                position="top-left"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable={false}
-                pauseOnHover={false}
-                limit={1}
-            />
+            <Toastify/>
             <div className="content-header coding-header">
                 <h1>Coding Projects</h1>
             </div>
             <Select 
                 className="coding-sort"
                 options={options}
-                onChange={sort}
+                onChange={reloadProjects}
                 isSearchable={false}
                 backspaceRemovesValue={false}
-                placeholder="Sort by"
+                placeholder="sort by"
             />
             <div>
             {projectsJSX}

@@ -19,12 +19,17 @@ div.menu-item:hover, div.menu-item:active {
     position: relative;
 }
 .link > img {
+    cursor: pointer;
     height:100px;
     position: absolute;
     top:-80px;
     left:130px;
     transform: rotate(15deg);
     z-index: 10;
+    filter:none;
+}
+.link > img:hover{
+	filter:drop-shadow(3px 3px 0 var(--accent-color)) drop-shadow(-3px -3px 0 var(--accent-color2));;
 }
 
 @media only screen and (max-width: 500px) {
