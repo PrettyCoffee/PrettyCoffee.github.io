@@ -22,6 +22,7 @@ export function Toastify(props:any){
 }
 
 export function toastAction (msg:string) {
+    toast.dismiss();
     toast.dark(msg, {
         position: "top-left",
         autoClose: 5000,

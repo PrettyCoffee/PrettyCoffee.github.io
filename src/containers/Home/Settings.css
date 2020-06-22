@@ -1,0 +1,191 @@
+.color-settings{
+    position: relative;
+    z-index: 150;
+    /* Use the animation name with additional properties */
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+@keyframes fade-in {
+    from { opacity:0 } to { opacity:1 }
+}
+.color-settings > div{
+    position: absolute;
+    top: 0px;
+    left:-173px;
+    height:157px;
+}
+.color-settings > div > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.color-settings > div > div > p{
+    margin:0px
+}
+
+/*Colorpicker*/
+.swatch {
+    padding: 5px;
+    background: var(--default-color);
+    border-radius: 1px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px 0px 3px 0px;
+    transition: .3s;
+}
+.swatch:hover {
+    filter:drop-shadow(3px 3px 0 var(--accent-color)) drop-shadow(-3px -3px 0 var(--accent-color2));
+}
+.swatch > div {
+    width: 50px;
+    height: 18px;
+    border-radius: 2px;
+}
+.swatch > div.bg-color {
+    background: var(--bg-color);
+}
+.swatch > div.default-color {
+    background: var(--default-color);
+}
+.swatch > div.accent-color {
+    background: var(--accent-color);
+}
+.swatch > div.accent-color2 {
+    background: var(--accent-color2);
+}
+.popover {
+    position: absolute;
+    left:3px;
+    top:3px;
+    z-Index: 100;
+    /* Use the animation name with additional properties */
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+div.popover > div.swatches-picker {
+    width:334px!important;
+}
+div.popover > div.swatches-picker > div > div > div {
+    height:184px!important;
+}
+.cover {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--bg-color);
+    opacity: 0.7;
+}
+
+
+
+
+
+/*Copy pasted glitch effect*/
+/*https://codepen.io/hi-im-si/pen/oXyqjG*/
+
+.glitch {
+    position: absolute;
+    left:-125px;
+    top:-90px;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    transform: scale3d(1, 1, 1);
+    opacity:1;
+    transition: 1s;
+    background-color: var(--bg-color);
+    bottom:0px;
+    letter-spacing: 9px;
+}
+
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background: var(--bg-color);
+    color: var(--default-color);
+    clip: rect(0, 900px, 0, 0);
+}
+.glitch::before {
+    left: 7px;
+    text-shadow: 4px 0 var(--accent-color);
+    animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+.glitch::after {
+    left: 3px;
+    text-shadow: -4px 0 var(--accent-color2);
+    animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+@keyframes glitch-effect {
+    0% {
+        clip: rect(9px, 9999px, 99px, 0);
+   }
+    5% {
+        clip: rect(91px, 9999px, 24px, 0);
+   }
+    10% {
+        clip: rect(88px, 9999px, 28px, 0);
+   }
+    15% {
+        clip: rect(42px, 9999px, 46px, 0);
+   }
+    20% {
+        clip: rect(50px, 9999px, 17px, 0);
+   }
+    25% {
+        clip: rect(21px, 9999px, 94px, 0);
+   }
+    30% {
+        clip: rect(19px, 9999px, 30px, 0);
+   }
+    35% {
+        clip: rect(89px, 9999px, 5px, 0);
+   }
+    40% {
+        clip: rect(90px, 9999px, 51px, 0);
+   }
+    45% {
+        clip: rect(36px, 9999px, 45px, 0);
+   }
+    50% {
+        clip: rect(47px, 9999px, 71px, 0);
+   }
+    55% {
+        clip: rect(88px, 9999px, 46px, 0);
+   }
+    60% {
+        clip: rect(55px, 9999px, 69px, 0);
+   }
+    65% {
+        clip: rect(95px, 9999px, 40px, 0);
+   }
+    70% {
+        clip: rect(1px, 9999px, 42px, 0);
+   }
+    75% {
+        clip: rect(48px, 9999px, 31px, 0);
+   }
+    80% {
+        clip: rect(7px, 9999px, 9px, 0);
+   }
+    85% {
+        clip: rect(50px, 9999px, 77px, 0);
+   }
+    90% {
+        clip: rect(91px, 9999px, 81px, 0);
+   }
+    95% {
+        clip: rect(20px, 9999px, 20px, 0);
+   }
+    100% {
+        clip: rect(25px, 9999px, 12px, 0);
+   }
+}

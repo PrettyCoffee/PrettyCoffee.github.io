@@ -29,7 +29,6 @@
     right: 13px;
     top: 3px;
     box-shadow: 3px -3px 0 var(--default-color);
-    text-shadow: 3px 3px 0 var(--accent-color);
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -44,7 +43,6 @@
     left: 359px;
     top: 3px;
     box-shadow: -3px -3px 0 var(--default-color);
-    text-shadow: 3px 3px 0 var(--accent-color);
 	display: flex;
 	justify-content: center;
 	align-content: center;

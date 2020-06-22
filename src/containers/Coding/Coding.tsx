@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select'
-import {Toastify, toastAction} from "../../components/Toastify/Toastify"
+import {toastAction} from "../../components/Toastify/Toastify"
 
 import Project from "./Project"
 import "./Coding.css"
@@ -37,10 +37,10 @@ const gitlabRepositories = [
 ]
 
 export function Coding(props:any){
-    const [projects]:project[] | any = useState([]);
-    const [currSort, setCurrSort]:any = useState(options[0]);
-    const [reload, setReload]:boolean | any = useState(true);
-    const [projectsJSX, setProjectsJSX]:JSX.Element[] | any = useState(["abc", "1223"]);
+    const [projects]:project[] | any = useState([])
+    const [currSort, setCurrSort]:any = useState(options[0])
+    const [reload, setReload]:boolean | any = useState(true)
+    const [projectsJSX, setProjectsJSX]:JSX.Element[] | any = useState([])
     
     //get all wanted projects
     useEffect(() => {
@@ -125,7 +125,6 @@ export function Coding(props:any){
     
     return(
         <>
-            <Toastify/>
             <div className="content-header coding-header">
                 <h1>Coding Projects</h1>
             </div>
