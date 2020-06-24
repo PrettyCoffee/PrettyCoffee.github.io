@@ -9,6 +9,10 @@ type props = {
     setPage:(s:string)=>{},
 }
 
+//TODO: Add to browser history if user navigates
+    //Maybe the user wants to press back in browser
+    //should also manipulate title of tab
+
 export function Home(props:props){
     const[displaySettings, setDisplaySettings]:boolean|any = useState(false)
     const[header, setHeader]:boolean|any = useState(!displaySettings)

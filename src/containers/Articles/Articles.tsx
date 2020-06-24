@@ -16,7 +16,7 @@ export function Articles(props:any){
                     <h1>Articles</h1>
                 </div>
                 <div className="content-header articles-disclaimer">
-                    <p>Disclaimer: Since my english is not academic, I will proceed with german at this point since the phrasing, in my opinion, is very important at this topic. </p>
+                    <p>Disclaimer: Since my english is not academic, I will proceed with german at this point because the phrasing, in my opinion, is very important at this topic. </p>
                 </div>
             </div>
             <div>

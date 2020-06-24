@@ -7,7 +7,7 @@ div.content-body.menu > div {
 }
 
 div.content-body.menu > div:hover, div.content-body.menu > div:active {
-    border-left: 0px solid var(--accent-color2);
+    border-left: 1px solid var(--accent-color2);
     opacity: 1;
 }
 
@@ -29,7 +29,7 @@ div.content-body.menu > div:hover, div.content-body.menu > div:active {
 	filter:drop-shadow(4px 4px 0 var(--accent-color)) drop-shadow(-4px -4px 0 var(--accent-color2));;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
     .link > img{
         top:265px;
         left:-175px;

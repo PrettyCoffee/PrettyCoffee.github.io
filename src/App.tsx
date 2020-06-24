@@ -13,6 +13,7 @@ import Designs from "./containers/Designs/Designs"
 import Articles from "./containers/Articles/Articles"
 
 import "./App.css"
+import { Router } from "react-router-dom";
 
 type colors = {
 	[key:string]:string
@@ -85,11 +86,11 @@ export default function App() {
 
 
 	/* Disabled Routing because github.io cant handle it
-		If Reemplementing you will have to change menu links and the home icon to <Link /> 
+	If Reemplementing you will have to change menu links and the home icon to <Link /> 
 	return (
+		<Router>
 		<div className="content-wrapper">
 			<Toastify/>
-			<Router>
 				<div className="icon-container">
 					<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
 					<a href="MailTo:jonathan-holz@outlook.com">
