@@ -43,7 +43,7 @@ export function About(props:any){
             <div className="content-body content-body-me">
                 <h2>Videogames <FontAwesomeIcon className="h2-icon" icon={faGamepad}/></h2>
                 <p>
-                Videogames are a great hobby to calm and train your mind. <br/>
+                Videogames are a great hobby to calm down and train your mind. <br/>
                 Besides ARPGs like Dark Souls I am also playing rythm games like Beat-Saber. And much more if there is enough spare time left!
                 </p>
             </div>
@@ -51,7 +51,7 @@ export function About(props:any){
             <div className="content-body content-body-me">
                 <h2>Music I <FontAwesomeIcon className="h2-icon" icon={faHeart}/></h2>
                 <p>
-                    I always listen to music because it fits every mood. I have been jumping between many genres the last years. To name some of them:<br/>
+                    I am always listening to music because it fits every mood. I have been jumping between many genres the last years. To name some of them:<br/>
                     - Doom/Black Metal<br/>
                     - Lofi Hip-Hop<br/>
                     - Videogame Soundtracks<br/>
