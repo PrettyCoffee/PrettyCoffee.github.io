@@ -44,14 +44,14 @@ export function About(props:any){
                 <h2>Videogames <FontAwesomeIcon className="h2-icon" icon={faGamepad}/></h2>
                 <p>
                 Videogames are a great hobby to calm and train your mind. <br/>
-                Besides ARPGs like Dark Souls I am also playing rythm games like Beat-Saber. And much more of course if there is enough spare time left!
+                Besides ARPGs like Dark Souls I am also playing rythm games like Beat-Saber. And much more if there is enough spare time left!
                 </p>
             </div>
             <div className="pic-l"><img alt="" src={music}/></div>
             <div className="content-body content-body-me">
                 <h2>Music I <FontAwesomeIcon className="h2-icon" icon={faHeart}/></h2>
                 <p>
-                    I am always listening to music since it always fits in every mood. I have been jumping between many genres the last years. To name some of them:<br/>
+                    I always listen to music because it fits every mood. I have been jumping between many genres the last years. To name some of them:<br/>
                     - Doom/Black Metal<br/>
                     - Lofi Hip-Hop<br/>
                     - Videogame Soundtracks<br/>

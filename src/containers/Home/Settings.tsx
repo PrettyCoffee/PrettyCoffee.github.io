@@ -8,7 +8,6 @@ type props = {
 }
 
 export function Settings(props:props){
-    //Todo: Colorpicker für eigene Farben und in Local Storage
     return(
         <>
             <div className="content-body">

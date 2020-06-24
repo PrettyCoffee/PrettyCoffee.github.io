@@ -16,34 +16,38 @@ type project = {
 }
 
 export function Project(project:project){
-    var created = new Date(project.created)
-    var latest = new Date(project.lastUpdate)
-    var projectYear:string = (created.getFullYear() === latest.getFullYear())?created.getFullYear()+"":created.getFullYear() + "-" + latest.getFullYear()
+    //calc project duration
+    let created = new Date(project.created)
+    let latest = new Date(project.lastUpdate)
+    let projectYear:string = (created.getFullYear() === latest.getFullYear())
+        ? created.getFullYear()+""
+        : created.getFullYear() + "-" + latest.getFullYear()
 
-    var description = (project.description.length > 77)?project.description.slice(0,77)+"...":project.description
+    //crop description
+    let description = (project.description.length > 77)?project.description.slice(0,77)+"...":project.description
 
-    var tags:JSX.Element[] = []
-    project.tags.forEach(tag => {
+    //format tags
+    let tags:JSX.Element[] = []
+    project.tags.forEach((tag:string) => {
         tags.push(
             <span>
                 {tag}
             </span>
         )
     });
+    
     return(
-            //Todo:Dropdown mit Sortiermöglichkeiten
-            //<div>latest change: {latest.toLocaleDateString('en-US')}</div>
         <>
             <div className="time-project"><span>{projectYear}</span></div>
             <div className="project-container">
                 <div className="project-image"><img src={(project.img)?project.img:defIcon} alt="Project Avatar"/></div>
                 <div className="project-details">
                     <h2>{project.name}</h2>
-                    <div className="tag-container">{tags}</div>
+                    <div className="project-tag-container">{tags}</div>
                     <p className="project-description">
                         {(project.description !== "")?description:"No description available"}
                     </p>
-                    <a className="project-button" href={project.url}>Go to Project <FontAwesomeIcon icon={faArrowRight}/></a>
+                    <a className="button project-button" href={project.url}>Go to Project <FontAwesomeIcon icon={faArrowRight}/></a>
                 </div>
             </div>
         </>

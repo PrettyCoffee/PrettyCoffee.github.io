@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from "react-router-dom";
 import Settings from './Settings';
 
 import "./Home.css"
@@ -7,14 +6,12 @@ import swlink from "../../ressources/sw-link.png"
 
 type props = {
     handleColorChange: (key: string, color: string) => void,
+    setPage:(s:string)=>{},
 }
 
 export function Home(props:props){
     const[displaySettings, setDisplaySettings]:boolean|any = useState(false)
     const[header, setHeader]:boolean|any = useState(!displaySettings)
-    //Todo: Colorpicker für eigene Farben und in Local Storage
-    //let root = document.documentElement;
-    //root.style.setProperty('--bg-color', 'rgba(46,46,46,255)');
     return(
         <>
             <div className="link">
@@ -39,12 +36,12 @@ export function Home(props:props){
                 </div>
             ):null}
 
-            <div className="content-body">
-                <Link to="/about"><div className="menu-item">About Me</div></Link>
-                <Link to="/CV"><div className="menu-item">CV</div></Link>
-                <Link to="/coding"><div className="menu-item">Coding</div></Link>
-                <Link to="/designs"><div className="menu-item">Designs (Work in Progress)</div></Link>
-                <Link to="/articles"><div className="menu-item">Articles (Work in Progress)</div></Link>
+            <div className="content-body menu">
+                <div onClick={() => props.setPage("about")}>About Me</div>
+                <div onClick={() => props.setPage("cv")}>CV</div>
+                <div onClick={() => props.setPage("coding")}>Coding</div>
+                <div onClick={() => props.setPage("designs")}>Designs (Work in Progress)</div>
+                <div onClick={() => props.setPage("articles")}>Articles (Work in Progress)</div>
             </div>
 
         </>

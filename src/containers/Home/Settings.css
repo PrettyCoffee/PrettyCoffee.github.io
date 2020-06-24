@@ -12,7 +12,7 @@
     position: absolute;
     top: 0px;
     left:-173px;
-    height:157px;
+    height:160px;
 }
 .color-settings > div > div{
     display: flex;
@@ -83,10 +83,7 @@ div.popover > div.swatches-picker > div > div > div {
 }
 
 
-
-
-
-/*Copy pasted glitch effect*/
+/* Copy pasted glitch effect */
 /*https://codepen.io/hi-im-si/pen/oXyqjG*/
 
 .glitch {
@@ -102,7 +99,6 @@ div.popover > div.swatches-picker > div > div > div {
     bottom:0px;
     letter-spacing: 9px;
 }
-
 .glitch::before, .glitch::after {
     content: attr(data-text);
     position: absolute;

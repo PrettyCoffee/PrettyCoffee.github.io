@@ -1,15 +1,16 @@
-div.menu-item {
+div.content-body.menu > div {
     padding: 5px 5px 5px 5px;
     border-bottom: 3px solid rgba(255,255,255,0);
     transition: 0.3s;
+    cursor: pointer;
 }
 
-div.menu-item:before {
+div.content-body.menu > div:before {
     content: "-";
     padding-right: 10px;
 }
 
-div.menu-item:hover, div.menu-item:active {
+div.content-body.menu > div:hover, div.content-body.menu > div:active {
     outline: 0;
     text-shadow: 5px 5px 0 var(--accent-color), -5px -5px 0 var(--accent-color2);
     box-shadow: 3px 3px 0 var(--accent-color), -3px -3px 0 var(--accent-color2);
@@ -27,13 +28,16 @@ div.menu-item:hover, div.menu-item:active {
     transform: rotate(15deg);
     z-index: 10;
     filter:none;
+    transition: .3s;
 }
 .link > img:hover{
-	filter:drop-shadow(3px 3px 0 var(--accent-color)) drop-shadow(-3px -3px 0 var(--accent-color2));;
+	filter:drop-shadow(4px 4px 0 var(--accent-color)) drop-shadow(-4px -4px 0 var(--accent-color2));;
 }
 
 @media only screen and (max-width: 500px) {
     .link > img{
-        display:none;
+        top:285px;
+        left:-175px;
+        transform: rotate(190deg);
     }
 }

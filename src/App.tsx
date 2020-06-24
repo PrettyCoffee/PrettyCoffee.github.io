@@ -1,14 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGitlab, faXing } from '@fortawesome/free-brands-svg-icons'
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link
-} from "react-router-dom";
-
 import {Toastify, toastAction} from "./components/Toastify/Toastify"
 
 //My Sites
@@ -35,6 +28,7 @@ const defaultColors:colors = {
 	'accent-color2': "rgba(200, 50, 50, 0.3)",
 }
 export default function App() {
+	const[page, setPage]:string|any = useState("home")
 	//Prepare colors
 	var root = document.documentElement;
 	Object.keys(defaultColors).forEach(key => {
@@ -49,12 +43,12 @@ export default function App() {
 		toastAction(key+' changed to '+color)
 		localStorage.setItem(key, color);
 	}
+
 	return (
 		<div className="content-wrapper">
 			<Toastify/>
-			<Router>
 			<div className="icon-container">
-				<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
+				<div className="back" onClick={() => setPage("home")}><FontAwesomeIcon icon={faHome}/></div>
 				<a href="MailTo:jonathan-holz@outlook.com">
 					<FontAwesomeIcon  icon={faEnvelope}/>
 				</a>
@@ -68,6 +62,49 @@ export default function App() {
 					<FontAwesomeIcon  icon={faGitlab}/>
 				</a>
 			</div>
+			{/* new state Router */}
+			{( page === "about" ) ? 
+				<About/>
+			: ( page === "cv" ) ? 
+				<CV/>
+			: ( page === "coding" ) ? 
+				<Coding/>
+			: ( page === "designs" ) ? 
+				<Designs/>
+			: ( page === "articles" ) ? 
+				<Articles/>
+			: ( // default case is Home
+				<Home 
+					handleColorChange={handleColorChange}
+					setPage={setPage}
+				/>
+			)}
+		</div>
+	)
+
+
+
+	/* Disabled Routing because github.io cant handle it
+		If Reemplementing you will have to change menu links and the home icon to <Link /> 
+	return (
+		<div className="content-wrapper">
+			<Toastify/>
+			<Router>
+				<div className="icon-container">
+					<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
+					<a href="MailTo:jonathan-holz@outlook.com">
+						<FontAwesomeIcon  icon={faEnvelope}/>
+					</a>
+					<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
+						<FontAwesomeIcon  icon={faXing}/>
+					</a>
+					<a href="https://github.com/PrettyCoffee">
+						<FontAwesomeIcon  icon={faGithubAlt}/>
+					</a>
+					<a href="https://gitlab.com/PrettyCoffee">
+						<FontAwesomeIcon  icon={faGitlab}/>
+					</a>
+				</div>
 				<Switch >
 					<Route path="/articles">
 						<Articles />
@@ -93,4 +130,5 @@ export default function App() {
 			</Router>
 		</div>
 	);
+	*/
 }

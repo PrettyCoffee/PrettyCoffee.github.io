@@ -25,9 +25,6 @@ h1, h2{
 h2{
     margin:0px;
 }
-img{
-	transition: 0.3s;
-}
 p{
 	margin:5px 0px 0px 0px;
 	font-size: 11pt;
@@ -106,9 +103,22 @@ div.icon-container > a:hover{
 	left:50px;
 	color:var(--default-color);
 	transition:.3s;
+	font-size: 30pt;
+	cursor: pointer;
 }
 .back:hover{
 	filter:drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
+}
+
+a.button{
+	background-color: var(--default-color);
+	color: var(--bg-color);
+	padding: 5px 12px 5px 12px;
+	border-radius: 7px;
+	transition: .3s;
+}
+a.button:hover{
+	filter: drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
 }
 
 

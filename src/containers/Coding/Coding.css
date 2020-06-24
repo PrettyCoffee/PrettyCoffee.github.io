@@ -21,6 +21,7 @@ div.content-header.coding-header{
     margin-bottom: 100px;
 }
 div.project-image{
+    min-width:150px; 
     width:150px; 
     height:150px; 
     overflow:hidden;
@@ -33,12 +34,8 @@ div.project-image{
     filter:drop-shadow(4px 4px 0 var(--accent-color));
     margin-right:15px;
 }
-div.project-image:hover{
-    filter:drop-shadow(-4px -4px 0 var(--accent-color2));
-}
 div.project-image > img{
     height: 150px;
-    filter:none;
 }
 div.project-container > div.project-details{
     display: flex;
@@ -50,17 +47,17 @@ div.project-container > div.project-details{
     width: 350px;
     height:150px;
 }
-.tag-container{
+.project-tag-container{
     align-self: flex-end;
 }
-.tag-container > span {
+.project-tag-container > span {
     font-size: 12px;
     border-radius: 8px;
     background-color: var(--default-color);
     color: var(--bg-color);
     padding:1px 5px 1px 5px;
     margin-right: 10px;
-    opacity: .5;
+    opacity: .7;
 }
 
 .time-project{
@@ -80,16 +77,8 @@ div.project-container > div.project-details{
 }
 
 div.project-details > a.project-button{
-    background-color: var(--default-color);
-    color: var(--bg-color);
-    padding: 5px 12px 5px 12px;
-    border-radius: 7px;
-    margin: 5px 10px 5px 0px;
     align-self: flex-end;
-    transition: .3s;
-}
-div.project-details > a.project-button:hover{
-    filter: drop-shadow(5px 5px 0 var(--accent-color)) drop-shadow(-5px -5px 0 var(--accent-color2));
+	margin: 5px 10px 5px 0px;
 }
 
 p.project-description{
