@@ -1,8 +1,9 @@
 import React, {useState} from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Toastify, toastAction} from "./components/Toastify/Toastify"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGitlab, faXing } from '@fortawesome/free-brands-svg-icons'
-import {Toastify, toastAction} from "./components/Toastify/Toastify"
 
 //My Sites
 import Home from "./containers/Home/Home"
@@ -13,7 +14,6 @@ import Designs from "./containers/Designs/Designs"
 import Articles from "./containers/Articles/Articles"
 
 import "./App.css"
-import { Router } from "react-router-dom";
 
 type colors = {
 	[key:string]:string
@@ -29,7 +29,6 @@ const defaultColors:colors = {
 	'accent-color2': "rgba(200, 50, 50, 0.3)",
 }
 export default function App() {
-	const[page, setPage]:string|any = useState("home")
 	//Prepare colors
 	var root = document.documentElement;
 	Object.keys(defaultColors).forEach(key => {
@@ -46,50 +45,8 @@ export default function App() {
 	}
 
 	return (
-		<div className="content-wrapper">
-			<Toastify/>
-			<div className="icon-container">
-				<div className="back" onClick={() => setPage("home")}><FontAwesomeIcon icon={faHome}/></div>
-				<a href="MailTo:jonathan-holz@outlook.com">
-					<FontAwesomeIcon  icon={faEnvelope}/>
-				</a>
-				<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
-					<FontAwesomeIcon  icon={faXing}/>
-				</a>
-				<a href="https://github.com/PrettyCoffee">
-					<FontAwesomeIcon  icon={faGithubAlt}/>
-				</a>
-				<a href="https://gitlab.com/PrettyCoffee">
-					<FontAwesomeIcon  icon={faGitlab}/>
-				</a>
-			</div>
-			{/* new state Router */}
-			{( page === "about" ) ? 
-				<About/>
-			: ( page === "cv" ) ? 
-				<CV/>
-			: ( page === "coding" ) ? 
-				<Coding/>
-			: ( page === "designs" ) ? 
-				<Designs/>
-			: ( page === "articles" ) ? 
-				<Articles/>
-			: ( // default case is Home
-				<Home 
-					handleColorChange={handleColorChange}
-					setPage={setPage}
-				/>
-			)}
-		</div>
-	)
-
-
-
-	/* Disabled Routing because github.io cant handle it
-	If Reemplementing you will have to change menu links and the home icon to <Link /> 
-	return (
 		<Router>
-		<div className="content-wrapper">
+			<div className="content-wrapper">
 			<Toastify/>
 				<div className="icon-container">
 					<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
@@ -113,7 +70,7 @@ export default function App() {
 					<Route path="/designs">
 						<Designs />
 					</Route>
-					<Route path="/Coding">
+					<Route path="/coding">
 						<Coding />
 					</Route>
 					<Route path="/about">
@@ -128,8 +85,96 @@ export default function App() {
 						/>
 					</Route>
 				</Switch>
-			</Router>
-		</div>
+			</div>
+		</Router>
 	);
-	*/
 }
+/* State Routing System */
+/*
+return (
+	<div className="content-wrapper">
+		<Toastify/>
+		<div className="icon-container">
+			<div className="back" onClick={() => setPage("home")}><FontAwesomeIcon icon={faHome}/></div>
+			<a href="MailTo:jonathan-holz@outlook.com">
+				<FontAwesomeIcon  icon={faEnvelope}/>
+			</a>
+			<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
+				<FontAwesomeIcon  icon={faXing}/>
+			</a>
+			<a href="https://github.com/PrettyCoffee">
+				<FontAwesomeIcon  icon={faGithubAlt}/>
+			</a>
+			<a href="https://gitlab.com/PrettyCoffee">
+				<FontAwesomeIcon  icon={faGitlab}/>
+			</a>
+		</div>
+	</div>
+)
+const[page, setPage]:string|any = useState("home")
+
+{( page === "about" ) ? 
+	<About/>
+: ( page === "cv" ) ? 
+	<CV/>
+: ( page === "coding" ) ? 
+	<Coding/>
+: ( page === "designs" ) ? 
+	<Designs/>
+: ( page === "articles" ) ? 
+	<Articles/>
+: ( // default case is Home
+	<Home 
+		handleColorChange={handleColorChange}
+		setPage={setPage}
+	/>
+)}
+*/
+
+/* Disabled Routing because github.io cant handle it
+If Reemplementing you will have to change menu links and the home icon to <Link /> 
+return (
+	<Router>
+	<div className="content-wrapper">
+		<Toastify/>
+			<div className="icon-container">
+				<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
+				<a href="MailTo:jonathan-holz@outlook.com">
+					<FontAwesomeIcon  icon={faEnvelope}/>
+				</a>
+				<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
+					<FontAwesomeIcon  icon={faXing}/>
+				</a>
+				<a href="https://github.com/PrettyCoffee">
+					<FontAwesomeIcon  icon={faGithubAlt}/>
+				</a>
+				<a href="https://gitlab.com/PrettyCoffee">
+					<FontAwesomeIcon  icon={faGitlab}/>
+				</a>
+			</div>
+			<Switch >
+				<Route path="/articles">
+					<Articles />
+				</Route>
+				<Route path="/designs">
+					<Designs />
+				</Route>
+				<Route path="/Coding">
+					<Coding />
+				</Route>
+				<Route path="/about">
+					<About />
+				</Route>
+				<Route path="/CV">
+					<CV />
+				</Route>
+				<Route path="/">
+					<Home 
+						handleColorChange={handleColorChange}
+					/>
+				</Route>
+			</Switch>
+		</Router>
+	</div>
+);
+*/

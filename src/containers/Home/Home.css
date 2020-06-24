@@ -1,12 +1,11 @@
-div.content-body.menu > div {
+div.content-body.menu > a > div {
     padding: 5px 5px 5px 10px;
     border-left: 7px solid var(--accent-color2);
     transition: 0.3s;
     cursor: pointer;
     opacity: 0.7
 }
-
-div.content-body.menu > div:hover, div.content-body.menu > div:active {
+div.content-body.menu > a > div:hover, div.content-body.menu > a > div:active {
     border-left: 1px solid var(--accent-color2);
     opacity: 1;
 }

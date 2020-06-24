@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
 import Settings from './Settings';
 
+import { Link } from "react-router-dom";
+
 import "./Home.css"
 import swlink from "../../ressources/sw-link.png" 
 
 type props = {
     handleColorChange: (key: string, color: string) => void,
-    setPage:(s:string)=>{},
 }
-
-//TODO: Add to browser history if user navigates
-    //Maybe the user wants to press back in browser
-    //should also manipulate title of tab
 
 export function Home(props:props){
     const[displaySettings, setDisplaySettings]:boolean|any = useState(false)
@@ -39,13 +36,12 @@ export function Home(props:props){
                     />
                 </div>
             ):null}
-
             <div className="content-body menu">
-                <div onClick={() => props.setPage("about")}>About Me</div>
-                <div onClick={() => props.setPage("cv")}>CV</div>
-                <div onClick={() => props.setPage("coding")}>Coding</div>
-                <div onClick={() => props.setPage("designs")}>Designs (Work in Progress)</div>
-                <div onClick={() => props.setPage("articles")}>Articles (Work in Progress)</div>
+                <Link to="/about"><div>About Me</div></Link>
+                <Link to="/cv"><div>CV</div></Link>
+                <Link to="/coding"><div>Coding</div></Link>
+                <Link to="/designs"><div>Designs (Work in Progress)</div></Link>
+                <Link to="/articles"><div>Articles (Work in Progress)</div></Link>
             </div>
 
         </>
