@@ -5,9 +5,6 @@
     animation-name: fade-in;
     animation-duration: 1s;
 }
-@keyframes fade-in {
-    from { opacity:0 } to { opacity:1 }
-}
 .color-settings > div{
     position: absolute;
     top: 0px;
@@ -61,15 +58,8 @@
     left:3px;
     top:3px;
     z-Index: 100;
-    /* Use the animation name with additional properties */
     animation-name: fade-in;
     animation-duration: 0.5s;
-}
-div.popover > div.swatches-picker {
-    width:334px!important;
-}
-div.popover > div.swatches-picker > div > div > div {
-    height:184px!important;
 }
 .cover {
     position: fixed;
@@ -80,6 +70,11 @@ div.popover > div.swatches-picker > div > div > div {
     left: 0px;
     background-color: var(--bg-color);
     opacity: 0.7;
+}
+
+
+@keyframes fade-in {
+    from { opacity:0 } to { opacity:1 }
 }
 
 

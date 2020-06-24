@@ -29,7 +29,7 @@ export function Settings(props:props){
             {displayColorPicker ? 
             <div className="popover">
                 <div className="cover" onClick={handleClose}/>
-                <SwatchesPicker colors={getColors()} onChange={handleChange} />
+                <SwatchesPicker height={169} width={334} colors={getColors()} onChange={handleChange} />
             </div> : null }
         </div>
     )

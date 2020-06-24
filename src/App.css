@@ -3,6 +3,8 @@
 	--default-color: rgba(230,230,230,1);
 	--accent-color: rgba(50,200,150,0.3);
 	--accent-color2: rgba(200, 50, 50, 0.3);
+	/* Articles */
+	--article-width:80%;
 }
 html, body, #root {
 	height:100%;
