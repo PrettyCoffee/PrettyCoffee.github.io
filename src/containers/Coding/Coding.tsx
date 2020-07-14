@@ -24,6 +24,9 @@ const selectOptions = [
 //Add new projects here
 const githubRepositories = [
     "PrettyCoffee/PrettyCoffee.github.io",
+    "PrettyCoffee/whom_shall_it_be",
+    "PrettyCoffee/b-w-kitty",
+    "PrettyCoffee/doggooos"
 ]
 const gitlabRepositories = [
     "14827017", //Golang Audio API
