@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fe07956ea018a6ce4a51ddff47d7349",
+    "revision": "b71c6a7cbf27d392289cc9f581b46925",
     "url": "/index.html"
   },
   {
-    "revision": "05a16db27707e2ece0e6",
+    "revision": "2fb2e13789be40d9828f",
     "url": "/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "0efe3bab3d9d66fdca5e",
-    "url": "/static/css/main.23991a14.chunk.css"
+    "revision": "35d88d13336efc6003af",
+    "url": "/static/css/main.741cccaf.chunk.css"
   },
   {
-    "revision": "05a16db27707e2ece0e6",
-    "url": "/static/js/2.47d61b0a.chunk.js"
+    "revision": "2fb2e13789be40d9828f",
+    "url": "/static/js/2.b40038c5.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/static/js/2.47d61b0a.chunk.js.LICENSE.txt"
+    "revision": "5e9b6f5c16b720e8a86875f97734673e",
+    "url": "/static/js/2.b40038c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0efe3bab3d9d66fdca5e",
-    "url": "/static/js/main.55ce6e47.chunk.js"
+    "revision": "35d88d13336efc6003af",
+    "url": "/static/js/main.febb03d6.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
   },
   {
-    "revision": "6752dc20c37127d44ec70b413d3a2839",
-    "url": "/static/media/Teacher.6752dc20.png"
+    "revision": "cba022b0348b08e5bc630d0bf7fcb1aa",
+    "url": "/static/media/FuturaLT.cba022b0.woff"
   },
   {
     "revision": "b8ba22648f6f9ed1014e0971b1a61059",
@@ -50,9 +50,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dbdca6553a2dbd79015cd461160ba58d",
     "url": "/static/media/music.dbdca655.png"
-  },
-  {
-    "revision": "40aaf72f78d1e832ec5c2b065402f912",
-    "url": "/static/media/sw-link.40aaf72f.png"
   }
 ]);
