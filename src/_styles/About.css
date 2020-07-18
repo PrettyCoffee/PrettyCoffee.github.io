@@ -6,7 +6,6 @@
     padding:5px;
     position: absolute;
     border:3px solid var(--default-color);
-    box-shadow: 3px 3px 0 var(--accent-color);
 }
 .pic-r > img {
     left: 355px;
