@@ -1,9 +1,9 @@
 import React from 'react';
-import { article } from "../../data/articles-data"
+import { article } from "../_data/articles-data"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import defIcon from "../../ressources/default-icon.png"
+import defIcon from "../_ressources/default-icon.png"
 
 export function Article(props:article){
     let date = new Date(props.date).toLocaleDateString()
@@ -35,7 +35,7 @@ console.log(props.authors.length)
     return(
         <>
             <div className="article-date"><span>{date}</span></div>
-            <div className="article-container">
+            <div className="content-body article-container">
                 <div className="article-image"><img src={props.img?props.img:defIcon} alt="Article Thumbnail"/></div>
                 <div className="article-details">
                     <h2>{props.title}</h2>

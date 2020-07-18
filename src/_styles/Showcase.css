@@ -1,0 +1,14 @@
+.showcase-iframe{
+    position: absolute;
+    display: inline-block;
+    top:150px;
+    bottom:50px;
+    height: 80vh;
+    width: 90vw;
+}
+
+@media only screen and (max-width: 350px) {
+    .showcase-iframe{
+        top:200px;
+    }
+}

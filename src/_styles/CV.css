@@ -1,0 +1,51 @@
+div.cv-content{
+    margin-top: 100px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+div.content-body.cvCard{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin:0px;
+}
+
+.time-cv{
+    position: relative;
+}
+.time-cv > span {
+    width:100px;
+    position: absolute;
+    left: -280px;
+    border-top: 2px solid var(--default-color);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .time-cv{
+        width:300px;
+        position: static;
+    }
+    .time-cv > span {
+        position: static;
+        display:block;
+        border:initial;
+    }
+    div.cvCard{
+        padding: 10px 0px 30px 0px
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    div.cv-content{
+        margin-top: 130px;
+        height:100%;
+    }
+}

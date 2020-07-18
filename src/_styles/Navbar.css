@@ -1,0 +1,85 @@
+div.navbar{
+    width: 100%;
+    background-color: var(--bg-color);
+    position: fixed;
+    top:0px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1000;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+div.navbar > a:first-child{
+	margin-left: 0px;
+}
+div.navbar > a:nth-child(2){
+	margin-left: 0px;
+}
+div.navbar > a{
+	font-size: 30pt;
+	margin-left: 20px;
+	transition:.3s;
+}
+div.navbar > a:hover{
+	filter:var(--hover-effect);
+}
+
+.home-button{
+	position: fixed;
+	top:20px;
+	left:50px;
+	color:var(--default-color);
+	transition:.3s;
+	font-size: 30pt;
+	cursor: pointer;
+}
+
+div.theme-switch{
+    position: fixed;
+    top:20px;
+    right:50px;
+    padding-top: 10px;
+}
+
+span.MuiSwitch-colorSecondary.Mui-checked {
+    color:rgb(80,80,80)
+}
+span.MuiSwitch-colorSecondary.Mui-checked + span.MuiSwitch-track{
+    background-color: rgb(60,60,60);
+}
+
+@media only screen and (max-width: 650px) {
+	.home-button{
+		position: initial;
+	}
+	div.navbar > a:nth-child(2){
+		margin-left: 20px;
+    }
+    div.theme-switch{
+        position:initial;
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    div.navbar{
+        position: absolute;
+        top:40px;
+        display: inline-flex;
+        width:initial;
+    }
+    div.theme-switch{
+        position: absolute;
+        top:-40px;
+        right: -5px;
+    }
+    .home-button{
+        position: absolute;
+        top:-40px;
+        left: 17px;
+    }
+}

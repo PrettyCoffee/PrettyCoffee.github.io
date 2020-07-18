@@ -1,0 +1,67 @@
+div.tabbar{
+    display:flex;
+    overflow-x: scroll;
+    width:90vw;
+}
+div.tabbar > div{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.tabbar > div > div{
+    display: inline-flex;
+    align-items: center;
+}
+div.tabbar > div > div > div.tab:last-child{
+    padding: 10px 0px 10px 30px;
+}
+div.tabbar > div > div > div.tab:first-child{
+    padding: 10px 30px 10px 0px;
+}
+div.tabbar > div > div > div.tab{
+    padding: 10px 30px 10px 30px;
+}
+div.tabbar > div > div > div.tab > div{
+    opacity: 0.5;
+    transition: .3s;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    cursor: pointer;
+}
+div.tabbar > div > div > div.tab.active-tab > div{
+    opacity: 1;
+    cursor: default;
+}
+div.tabbar > div > div > div.tab.active-tab > div:hover{
+    border-bottom-color: rgba(0,0,0,0);
+}
+div.tabbar > div > div > div.tab > div:hover{
+    opacity: 1;
+    border-bottom-color: var(--default-color);
+}
+div.tab-spacer{
+    height:20px;
+    border-right: 1px solid var(--default-color);
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 350px) {
+    div.tabbar.main-tabbar > div > div > div {
+        font-size: 18pt;
+    }
+}
+
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 15px;
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--default-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--default-color);
+}

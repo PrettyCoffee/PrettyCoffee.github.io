@@ -1,19 +1,17 @@
-import React, {useState} from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {Toastify, toastAction} from "./components/Toastify/Toastify"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithubAlt, faGitlab, faXing } from '@fortawesome/free-brands-svg-icons'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Toastify, toastAction } from "./_components/Toastify"
+import Navbar from "./_components/Navbar"
 
 //My Sites
-import Home from "./containers/Home/Home"
-import About from "./containers/About/About"
-import CV from "./containers/CV/CV"
-import Coding from "./containers/Coding/Coding"
-import Designs from "./containers/Designs/Designs"
-import Articles from "./containers/Articles/Articles"
+import Start from "./Start/Start"
+import About from "./About/About"
+import CV from "./CV/CV"
+import Coding from "./Coding/Coding"
+import Showcase from "./Showcase/Showcase"
+import Articles from "./Articles/Articles"
 
-import "./App.css"
+import "./_styles/App.css"
 
 type colors = {
 	[key:string]:string
@@ -47,28 +45,14 @@ export default function App() {
 	return (
 		<Router>
 			<div className="content-wrapper">
-			<Toastify/>
-				<div className="icon-container">
-					<Link className="back" to="/"><FontAwesomeIcon icon={faHome}/></Link>
-					<a href="MailTo:jonathan-holz@outlook.com">
-						<FontAwesomeIcon  icon={faEnvelope}/>
-					</a>
-					<a href="https://www.xing.com/profile/Jonathan_Holz2/cv">
-						<FontAwesomeIcon  icon={faXing}/>
-					</a>
-					<a href="https://github.com/PrettyCoffee">
-						<FontAwesomeIcon  icon={faGithubAlt}/>
-					</a>
-					<a href="https://gitlab.com/PrettyCoffee">
-						<FontAwesomeIcon  icon={faGitlab}/>
-					</a>
-				</div>
+				<Toastify />
+				<Navbar />
 				<Switch >
 					<Route path="/articles">
 						<Articles />
 					</Route>
-					<Route path="/designs">
-						<Designs />
+					<Route path="/showcase">
+						<Showcase />
 					</Route>
 					<Route path="/coding">
 						<Coding />
@@ -80,7 +64,7 @@ export default function App() {
 						<CV />
 					</Route>
 					<Route path="/">
-						<Home 
+						<Start 
 							handleColorChange={handleColorChange}
 						/>
 					</Route>

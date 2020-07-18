@@ -20,9 +20,7 @@ h2 > .h2-icon{
 }
 .content-body-me{
     min-height:180px;
-}
-.content-body-me:last-child{
-    margin-bottom: 100px;
+    text-align: justify;
 }
 
 @media only screen and (max-width: 850px) {
@@ -34,14 +32,19 @@ h2 > .h2-icon{
         right: 355px;
         left: unset;
     }
+    .content-body.content-body-me{
+        padding-bottom: 50px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
     .pic-r, .pic-l {
         margin-bottom: 10px;
+        display:flex;
+        justify-content: center;
     }
     .pic-r > img, .pic-l > img {
-        width: 330px;
+        width: 200px;
         position: static;
         right: unset;
         left: unset;
@@ -50,5 +53,7 @@ h2 > .h2-icon{
     .content-header.content-header-me,
     .content-body.content-body-me{
         margin-left: 0px;
+        padding: 10px 10px 20px 10px;
+        width:initial;
     }
 }

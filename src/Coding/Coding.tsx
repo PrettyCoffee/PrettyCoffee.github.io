@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select'
-import {toastAction} from "../../components/Toastify/Toastify"
+import {toastAction} from "../_components/Toastify"
 
 import Project from "./Project"
-import "./Coding.css"
+import "../_styles/Coding.css"
 
 type project = {
     img:string,
@@ -149,7 +149,7 @@ export function Coding(props:any){
     
     return(
         <>
-            <div className="content-header coding-header">
+            <div className="content-header">
                 <h1>Coding Projects</h1>
             </div>
             <Select 
@@ -161,7 +161,7 @@ export function Coding(props:any){
                 placeholder="sort by"
             />
             <div>
-            {projectsJSX}
+                {projectsJSX}
             </div>
         </>
     )

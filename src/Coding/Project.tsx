@@ -2,8 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import "./Coding.css"
-import defIcon from "../../ressources/default-icon.png"
+import defIcon from "../_ressources/default-icon.png"
 
 type project = {
     img:string,
@@ -24,7 +23,7 @@ export function Project(project:project){
         : created.getFullYear() + "-" + latest.getFullYear()
 
     //crop description
-    let description = (project.description.length > 77)?project.description.slice(0,77)+"...":project.description
+    let description = project.description // (project.description.length > 77)?project.description.slice(0,77)+"...":project.description
 
     //format tags
     let tags:JSX.Element[] = []
@@ -40,7 +39,7 @@ export function Project(project:project){
         <>
             <div className="time-project"><span>{projectYear}</span></div>
             <div className="project-container">
-                <div className="project-image"><img src={(project.img)?project.img:defIcon} alt="Project Avatar"/></div>
+                <div className="project-image"><img className={(project.img)?"":"defaultAvatar"} src={(project.img)?project.img:defIcon} alt="Project Avatar"/></div>
                 <div className="project-details">
                     <h2>{project.name}</h2>
                     <div className="project-tag-container">{tags}</div>

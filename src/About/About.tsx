@@ -2,12 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faPortrait, faGamepad, faDumbbell } from '@fortawesome/free-solid-svg-icons'
 
-import "./About.css"
-import me from "../../ressources/me.png"
-import fitness from "../../ressources/fitness.png"
-import darksouls from "../../ressources/dark-souls.png"
-//import bouldering from "../../ressources/bouldering.png"
-import music from "../../ressources/music.png"
+import "../_styles/About.css"
+import me from "../_ressources/me.png"
+import fitness from "../_ressources/fitness.png"
+import darksouls from "../_ressources/dark-souls.png"
+//import bouldering from "../_ressources/bouldering.png"
+import music from "../_ressources/music.png"
 
 
 export function About(props:any){

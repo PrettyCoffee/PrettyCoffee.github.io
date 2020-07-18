@@ -1,7 +1,12 @@
 .Toastify__toast--dark{
     border: 4px solid var(--accent-color);
     background-color: var(--bg-color);
+    color: var(--default-color);
 }
 .Toastify__progress-bar--dark{
     background: var(--accent-color2);
+}
+.Toastify__close-button{
+    color: var(--default-color);
+
 }
