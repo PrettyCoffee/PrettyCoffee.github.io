@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
 import Switch from '@material-ui/core/Switch'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -32,7 +31,10 @@ const themes:themeCollection = {
         'accent-color2': "rgba(255, 170, 170, 0.3)",
     },
 }
-export default function Navbar() {
+type props = {
+    setCurrPage: (page:string) => void
+}
+export default function Navbar(props:props) {
     const [theme, setTheme]:"light"|"dark"|any = useState("light")
     
     //Prepare colors
@@ -59,7 +61,7 @@ export default function Navbar() {
 
 	return (
         <div className="navbar">
-            <Link className="home-button" to="/"><FontAwesomeIcon icon={faHome}/></Link>
+            <a className="home-button" onClick={() => props.setCurrPage("")}><FontAwesomeIcon icon={faHome}/></a>
             <a href="MailTo:jonathan-holz@outlook.com">
                 <FontAwesomeIcon  icon={faEnvelope}/>
             </a>
