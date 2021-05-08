@@ -38,7 +38,6 @@ const Greeting = styled.div`
     top: 450px;
     :before {
       content: 'Welcome';
-      font-family: 'Pangolin';
       color: ${color.light};
       font-size: ${space.xl};
     }

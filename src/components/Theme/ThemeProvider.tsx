@@ -11,8 +11,7 @@ import { getTheme } from './getTheme';
 const { color } = getTheme();
 
 const globalStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -25,13 +24,15 @@ const globalStyles = css`
     border-radius: 10px;
   }
   body {
-    font-family: 'Fira Code';
-    font-weight: 300;
     margin: 0;
     overflow: overlay;
   }
   #root {
     width: 100vw;
+    * {
+      font-family: 'Quicksand';
+      font-weight: 300;
+    }
   }
 `;
 
