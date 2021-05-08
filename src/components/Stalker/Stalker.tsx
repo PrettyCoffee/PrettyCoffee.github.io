@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
+import useMousePosition from '@react-hook/mouse-position';
 
 import iris from './eye/iris.svg';
 import pupil from './eye/pupil.svg';
@@ -41,23 +42,20 @@ const Pupil = styled.img<{ x: number; y: number }>`
   transition: 0.1s;
 `;
 
-type StalkerProps = {
-  lookAt: { x: number | null; y: number | null };
-};
-
-export const Stalker = ({ lookAt }: StalkerProps) => {
+export const Stalker = () => {
+  const mousePosition = useMousePosition(document.getElementById('root'));
   const screenBoundary = { x: window.innerWidth, y: window.innerHeight };
   const eyeRef = React.useRef<HTMLDivElement | null>(null);
 
   const getXAxis = () => {
-    if (!lookAt.x) return 0;
+    if (!mousePosition.pageX) return 0;
     if (!eyeRef.current) return 0;
 
     const wrapperPosition =
       eyeRef.current.getBoundingClientRect().x + window.pageXOffset;
 
     const result =
-      (lookAt.x - wrapperPosition - EYE_WIDTH / 2) /
+      (mousePosition.pageX - wrapperPosition - EYE_WIDTH / 2) /
       (screenBoundary.x / EYE_HEIGHT);
     if (result > X_BOUNDARY) return X_BOUNDARY;
     if (result < -X_BOUNDARY) return -X_BOUNDARY;
@@ -65,14 +63,14 @@ export const Stalker = ({ lookAt }: StalkerProps) => {
   };
 
   const getYAxis = () => {
-    if (!lookAt.y) return 0;
+    if (!mousePosition.pageY) return 0;
     if (!eyeRef.current) return 0;
 
     const wrapperPosition =
       eyeRef.current.getBoundingClientRect().y + window.pageYOffset;
 
     const result =
-      (lookAt.y - wrapperPosition - EYE_HEIGHT / 2) /
+      (mousePosition.pageY - wrapperPosition - EYE_HEIGHT / 2) /
       (screenBoundary.y / EYE_HEIGHT);
     if (result > Y_BOUNDARY) return Y_BOUNDARY;
     if (result < -Y_BOUNDARY) return -Y_BOUNDARY;

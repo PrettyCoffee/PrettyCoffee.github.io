@@ -26,9 +26,8 @@ const globalStyles = css`
   body {
     margin: 0;
     overflow: overlay;
-  }
-  #root {
     width: 100vw;
+    color: ${color.light};
   }
   * {
     font-family: 'Quicksand';

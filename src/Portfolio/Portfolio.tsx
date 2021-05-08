@@ -17,7 +17,6 @@ import {
   faAddressCard,
   faHashtag,
 } from '@fortawesome/free-solid-svg-icons';
-import useMousePosition from '@react-hook/mouse-position';
 
 import {
   Scrollspy,
@@ -26,13 +25,14 @@ import {
   Stalker,
   Card,
   CardGroup,
+  Typer,
 } from '../components';
 import profile from '../ressources/logo.svg';
 
 const Placeholder = styled.div<{ dark: boolean }>`
   ${({ theme: { color }, dark }) => css`
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     background-color: ${dark ? color.dark : color.light};
   `}
@@ -50,24 +50,18 @@ const Placeholder = styled.div<{ dark: boolean }>`
   }
 `;
 
-const Greeting = styled.div`
-  ${({ theme: { color, space } }) => css`
-    position: absolute;
-    top: 450px;
-    :before {
-      content: 'Welcome';
-      color: ${color.light};
-      font-size: ${space.xl};
-    }
-  `}
-`;
-
 const StalkerContainer = styled.div`
-  position: absolute;
-  top: 200px;
-
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
+`;
+const TyperContainer = styled.div`
+  width: 500px;
+  font-size: ${({ theme }) => theme.space.xl};
+  ${({ theme }) => theme.breakpoints.mobile} {
+    width: 250px;
+    font-size: ${({ theme }) => theme.space.lg};
+  }
 `;
 
 const Profile = styled.div`
@@ -101,7 +95,6 @@ const Button = styled.button`
 `;
 
 export const Portfolio = () => {
-  const mousePosition = useMousePosition(document.getElementById('root'));
   const { color } = useTheme();
 
   return (
@@ -115,11 +108,22 @@ export const Portfolio = () => {
       <ScrollspyContent icon={faOctopusDeploy} label={'intro'}>
         <Placeholder dark={true}>
           <StalkerContainer>
-            <Stalker
-              lookAt={{ x: mousePosition.pageX, y: mousePosition.pageY }}
-            />
+            <Stalker />
           </StalkerContainer>
-          <Greeting />
+          <TyperContainer>
+            <Typer
+              text={`Welcome to my \n`}
+              textCarousel={[
+                'portfolio',
+                'passion',
+                'hobby',
+                'project',
+                'realm',
+                'fun generator',
+              ]}
+              timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 2000 }}
+            />
+          </TyperContainer>
         </Placeholder>
       </ScrollspyContent>
       <ScrollspyContent icon={faAddressCard} label={'about me'}>
