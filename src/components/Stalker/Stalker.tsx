@@ -7,6 +7,7 @@ import pupil from './eye/pupil.svg';
 import sclera from './eye/sclera.svg';
 
 const EYE_HEIGHT = 200;
+const EYE_WIDTH = 286;
 const X_BOUNDARY = EYE_HEIGHT / 2.2;
 const Y_BOUNDARY = EYE_HEIGHT / 4.2;
 
@@ -18,6 +19,7 @@ const StalkerWrapper = styled.div`
 const Sclera = styled.img`
   position: relative;
   height: ${EYE_HEIGHT}px;
+  width: ${EYE_WIDTH}px;
   z-index: 5;
 `;
 
@@ -45,11 +47,18 @@ type StalkerProps = {
 
 export const Stalker = ({ lookAt }: StalkerProps) => {
   const screenBoundary = { x: window.innerWidth, y: window.innerHeight };
+  const eyeRef = React.useRef<HTMLDivElement | null>(null);
 
   const getXAxis = () => {
     if (!lookAt.x) return 0;
+    if (!eyeRef.current) return 0;
+
+    const wrapperPosition =
+      eyeRef.current.getBoundingClientRect().x + window.pageXOffset;
+
     const result =
-      (lookAt.x - screenBoundary.x / 2) / (screenBoundary.x / EYE_HEIGHT);
+      (lookAt.x - wrapperPosition - EYE_WIDTH / 2) /
+      (screenBoundary.x / EYE_HEIGHT);
     if (result > X_BOUNDARY) return X_BOUNDARY;
     if (result < -X_BOUNDARY) return -X_BOUNDARY;
     return result;
@@ -57,8 +66,13 @@ export const Stalker = ({ lookAt }: StalkerProps) => {
 
   const getYAxis = () => {
     if (!lookAt.y) return 0;
+    if (!eyeRef.current) return 0;
+
+    const wrapperPosition =
+      eyeRef.current.getBoundingClientRect().y + window.pageYOffset;
+
     const result =
-      (lookAt.y - screenBoundary.y / 5 - EYE_HEIGHT / 2) /
+      (lookAt.y - wrapperPosition - EYE_HEIGHT / 2) /
       (screenBoundary.y / EYE_HEIGHT);
     if (result > Y_BOUNDARY) return Y_BOUNDARY;
     if (result < -Y_BOUNDARY) return -Y_BOUNDARY;
@@ -66,7 +80,7 @@ export const Stalker = ({ lookAt }: StalkerProps) => {
   };
 
   return (
-    <StalkerWrapper>
+    <StalkerWrapper ref={eyeRef}>
       <Sclera src={sclera} />
       <Iris src={iris} x={getXAxis()} y={getYAxis()} />
       <Pupil
