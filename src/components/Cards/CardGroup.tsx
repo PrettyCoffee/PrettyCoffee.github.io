@@ -1,5 +1,12 @@
 import styled from '@emotion/styled';
 
 export const CardGroup = styled.div`
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  ${({ theme }) => theme.breakpoints.tablet} {
+    grid-template-columns: auto auto;
+  }
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: auto;
+  }
 `;
