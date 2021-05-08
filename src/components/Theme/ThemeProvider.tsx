@@ -29,9 +29,16 @@ const globalStyles = css`
   }
   #root {
     width: 100vw;
-    * {
-      font-family: 'Quicksand';
-      font-weight: 300;
+  }
+  * {
+    font-family: 'Quicksand';
+    font-weight: 300;
+  }
+
+  a {
+    text-decoration: none;
+    ::visited {
+      color: unset;
     }
   }
 `;

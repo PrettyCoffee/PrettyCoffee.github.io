@@ -11,6 +11,7 @@ const color = {
   blue: 'rgb(97,175,239)',
   purple: 'rgb(198,120,221)',
   cyan: 'rgb(86,182,194)',
+  orange: 'rgb(255, 187, 124)',
 };
 
 const space = {

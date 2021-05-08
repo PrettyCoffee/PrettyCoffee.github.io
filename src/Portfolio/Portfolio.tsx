@@ -1,10 +1,16 @@
 import React from 'react';
 
-import { css } from '@emotion/react';
+import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   faGithubAlt,
   faOctopusDeploy,
+  faYoutube,
+  faGithub,
+  faGitlab,
+  faReddit,
+  faXing,
+  faSteam,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faCoffee,
@@ -18,6 +24,8 @@ import {
   ScrollspyExtra,
   ScrollspyContent,
   Stalker,
+  Card,
+  CardGroup,
 } from '../components';
 import profile from '../ressources/logo.svg';
 
@@ -30,6 +38,16 @@ const Placeholder = styled.div<{ dark: boolean }>`
   `}
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 150px;
+  box-sizing: border-box;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 const Greeting = styled.div`
@@ -84,6 +102,7 @@ const Button = styled.button`
 
 export const Portfolio = () => {
   const mousePosition = useMousePosition(document.getElementById('root'));
+  const { color } = useTheme();
 
   return (
     <Scrollspy>
@@ -109,11 +128,56 @@ export const Portfolio = () => {
       <ScrollspyContent icon={faGithubAlt} label={'projects'}>
         <Placeholder dark={true} />
       </ScrollspyContent>
-      <ScrollspyContent icon={faHashtag} label={'follow me'}>
+      <ScrollspyContent icon={faCoffee} label={'ressources'}>
         <Placeholder dark={false} />
       </ScrollspyContent>
-      <ScrollspyContent icon={faCoffee} label={'ressources'}>
-        <Placeholder dark={true} />
+      <ScrollspyContent icon={faHashtag} label={'follow me'}>
+        <Placeholder dark={true}>
+          <CardGroup>
+            <Card
+              url={'https://www.xing.com/profile/Jonathan_Holz2'}
+              icon={faXing}
+              color={color.green}
+            >
+              Jonathan Holz
+            </Card>
+            <Card
+              url={'https://github.com/PrettyCoffee'}
+              icon={faGithub}
+              color={color.dark}
+            >
+              PrettyCoffee
+            </Card>
+            <Card
+              url={'https://gitlab.com/PrettyCoffee'}
+              icon={faGitlab}
+              color={color.purple}
+            >
+              PrettyCoffee
+            </Card>
+            <Card
+              url={'https://www.youtube.com/channel/UCtQqZ6EhvprvC0H2tLN2EcA'}
+              icon={faYoutube}
+              color={color.red}
+            >
+              PrettyCoffee
+            </Card>
+            <Card
+              url={'https://www.reddit.com/user/SpinatMixxer'}
+              icon={faReddit}
+              color={color.orange}
+            >
+              u/SpinatMixxer
+            </Card>
+            <Card
+              url={'https://steamcommunity.com/id/PrettyCoffee/'}
+              icon={faSteam}
+              color={color.blue}
+            >
+              PrettyCoffee
+            </Card>
+          </CardGroup>
+        </Placeholder>
       </ScrollspyContent>
 
       <ScrollspyExtra>

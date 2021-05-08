@@ -13,6 +13,7 @@ declare module '@emotion/react' {
       blue: string;
       purple: string;
       cyan: string;
+      orange: string;
     };
     space: {
       xxs: string;
