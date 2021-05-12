@@ -42,6 +42,7 @@ const animation = {
 const breakpoints = {
   mobile: '@media only screen and (max-width: 700px)',
   tablet: '@media only screen and (max-width: 1024px)',
+  laptop: '@media only screen and (max-width: 1440px)',
 };
 
 export const getTheme = () =>

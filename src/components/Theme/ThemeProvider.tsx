@@ -39,6 +39,7 @@ const globalStyles = css`
     ::visited {
       color: unset;
     }
+    color: unset;
   }
 `;
 
