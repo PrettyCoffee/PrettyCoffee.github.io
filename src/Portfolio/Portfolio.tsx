@@ -5,12 +5,6 @@ import styled from '@emotion/styled';
 import {
   faGithubAlt,
   faOctopusDeploy,
-  faYoutube,
-  faGithub,
-  faGitlab,
-  faReddit,
-  faXing,
-  faSteam,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faCoffee,
@@ -22,31 +16,14 @@ import {
   Scrollspy,
   ScrollspyExtra,
   ScrollspyContent,
-  Stalker,
-  Card,
-  CardGroup,
-  Typer,
   Tile,
   TileGroup,
   Section,
 } from '../components';
 import logo from '../data/media/logo.svg';
 import { ressources } from '../data/ressources';
+import { Intro } from './Intro';
 import { SocialMedia } from './SocialMedia';
-
-const StalkerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-bottom: 100px;
-`;
-const TyperContainer = styled.div`
-  width: 500px;
-  font-size: ${({ theme }) => theme.space.xl};
-  ${({ theme }) => theme.breakpoints.mobile} {
-    width: 250px;
-    font-size: ${({ theme }) => theme.space.lg};
-  }
-`;
 
 const Profile = styled.div`
   ${({ theme: { border, space } }) => css`
@@ -94,22 +71,7 @@ export const Portfolio = () => {
 
       <ScrollspyContent icon={faOctopusDeploy} label={'intro'}>
         <Section bgcolor={color.dark}>
-          <StalkerContainer>
-            <Stalker />
-          </StalkerContainer>
-          <TyperContainer>
-            <Typer
-              text={`Welcome to my \n`}
-              textCarousel={[
-                'portfolio',
-                'passion',
-                'hobby',
-                'project',
-                'playground',
-              ]}
-              timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 2000 }}
-            />
-          </TyperContainer>
+          <Intro />
         </Section>
       </ScrollspyContent>
 
