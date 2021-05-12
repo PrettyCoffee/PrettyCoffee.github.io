@@ -26,29 +26,12 @@ import {
   Card,
   CardGroup,
   Typer,
+  Tile,
+  TileGroup,
+  Section,
 } from '../components';
-import profile from '../ressources/logo.svg';
-
-const Placeholder = styled.div<{ dark: boolean }>`
-  ${({ theme: { color }, dark }) => css`
-    width: 100vw;
-    min-height: 100vh;
-    position: relative;
-    background-color: ${dark ? color.dark : color.light};
-  `}
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  padding: 150px;
-  box-sizing: border-box;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-`;
+import logo from '../data/media/logo.svg';
+import { ressources } from '../data/ressources';
 
 const StalkerContainer = styled.div`
   display: flex;
@@ -87,9 +70,12 @@ const Button = styled.button`
     padding: 0 ${space.sm};
     height: ${space.lg};
     transition: 0.3s;
-    :hover {
+    :hover,
+    :active,
+    :focus {
       color: ${color.dark};
       background-color: ${color.light};
+      outline: none;
     }
   `}
 `;
@@ -101,12 +87,12 @@ export const Portfolio = () => {
     <Scrollspy>
       <ScrollspyExtra>
         <Profile>
-          <img src={profile} alt={'avatar'} />
+          <img src={logo} alt={'avatar'} />
         </Profile>
       </ScrollspyExtra>
 
       <ScrollspyContent icon={faOctopusDeploy} label={'intro'}>
-        <Placeholder dark={true}>
+        <Section bgcolor={color.dark}>
           <StalkerContainer>
             <Stalker />
           </StalkerContainer>
@@ -118,25 +104,34 @@ export const Portfolio = () => {
                 'passion',
                 'hobby',
                 'project',
-                'realm',
-                'fun generator',
+                'playground',
               ]}
               timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 2000 }}
             />
           </TyperContainer>
-        </Placeholder>
+        </Section>
       </ScrollspyContent>
+
       <ScrollspyContent icon={faAddressCard} label={'about me'}>
-        <Placeholder dark={false} />
+        <Section bgcolor={color.light}></Section>
       </ScrollspyContent>
+
       <ScrollspyContent icon={faGithubAlt} label={'projects'}>
-        <Placeholder dark={true} />
+        <Section bgcolor={color.dark}></Section>
       </ScrollspyContent>
+
       <ScrollspyContent icon={faCoffee} label={'ressources'}>
-        <Placeholder dark={false} />
+        <Section bgcolor={color.light}>
+          <TileGroup autoFill={true} tileSize={'11.5rem'}>
+            {ressources.map((ressource, index) => (
+              <Tile key={'ressource-' + index} {...ressource} />
+            ))}
+          </TileGroup>
+        </Section>
       </ScrollspyContent>
+
       <ScrollspyContent icon={faHashtag} label={'follow me'}>
-        <Placeholder dark={true}>
+        <Section bgcolor={color.dark}>
           <CardGroup>
             <Card
               url={'https://www.xing.com/profile/Jonathan_Holz2'}
@@ -181,7 +176,7 @@ export const Portfolio = () => {
               PrettyCoffee
             </Card>
           </CardGroup>
-        </Placeholder>
+        </Section>
       </ScrollspyContent>
 
       <ScrollspyExtra>

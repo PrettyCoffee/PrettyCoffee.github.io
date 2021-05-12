@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-518.993)">
+        <g id="ArtBoard2" transform="matrix(1,0,0,1.00019,-500,-1.19181)">
+            <rect x="500" y="520.084" width="500" height="499.903" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="500" y="520.084" width="500" height="499.903"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g id="design-systems.svg" transform="matrix(0.728863,0,0,0.728722,750,770.036)">
+                    <g transform="matrix(1,0,0,1,-235.5,-343)">
+                        <clipPath id="_clip2">
+                            <rect x="0" y="0" width="471" height="686"/>
+                        </clipPath>
+                        <g clip-path="url(#_clip2)">
+                            <g>
+                                <path d="M95.745,0L242.375,146.473L245.208,0L95.745,0Z" style="fill:rgb(62,80,170);"/>
+                                <rect x="245" y="0" width="149" height="73" style="fill:rgb(255,145,160);"/>
+                                <ellipse cx="355" cy="111.5" rx="39" ry="38.5" style="fill:rgb(0,153,255);"/>
+                                <circle cx="355.5" cy="111.5" r="12.5" style="fill:white;"/>
+                                <rect x="394" y="73" width="77" height="77" style="fill:rgb(62,80,170);"/>
+                                <ellipse cx="432" cy="111.5" rx="39" ry="38.5" style="fill:rgb(255,90,58);"/>
+                                <g transform="matrix(1,0,0,1,85,149)">
+                                    <rect x="2" y="0" width="388" height="383" style="fill:rgb(255,174,0);"/>
+                                    <ellipse cx="196.5" cy="191.5" rx="196.5" ry="191.5" style="fill:rgb(0,153,255);"/>
+                                    <circle cx="262.5" cy="115.5" r="93.5" style="fill:rgb(255,145,160);"/>
+                                </g>
+                                <circle cx="43.5" cy="488.5" r="43.5" style="fill:rgb(255,145,160);"/>
+                                <rect x="8" y="532" width="230" height="153" style="fill:rgb(255,90,58);"/>
+                                <path d="M238.638,532L238.638,686L391.638,686L238.638,532Z" style="fill:rgb(62,80,170);"/>
+                                <g transform="matrix(1,0,0,1,392,609)">
+                                    <rect x="0" y="0" width="79" height="77" style="fill:rgb(0,153,255);"/>
+                                    <circle cx="39.5" cy="38.5" r="38.5" style="fill:rgb(62,80,170);"/>
+                                </g>
+                                <ellipse cx="432" cy="570.5" rx="39" ry="38.5" style="fill:rgb(255,145,160);"/>
+                                <circle cx="432.5" cy="570.5" r="12.5" style="fill:white;"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

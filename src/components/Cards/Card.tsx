@@ -37,7 +37,10 @@ const CardWrapper = styled.a<{ color: string }>`
     opacity: 0.4;
   }
 
-  :hover {
+  :hover,
+  :active,
+  :focus {
+    outline: none;
     ::before {
       bottom: 10rem;
     }
