@@ -16,13 +16,11 @@ import {
   Scrollspy,
   ScrollspyExtra,
   ScrollspyContent,
-  Tile,
-  TileGroup,
   Section,
 } from '../components';
 import logo from '../data/media/logo.svg';
-import { ressources } from '../data/ressources';
 import { Intro } from './Intro';
+import { Ressources } from './Ressources';
 import { SocialMedia } from './SocialMedia';
 
 const Profile = styled.div`
@@ -85,11 +83,7 @@ export const Portfolio = () => {
 
       <ScrollspyContent icon={faCoffee} label={'ressources'}>
         <Section bgcolor={color.light}>
-          <TileGroup autoFill={true} tileSize={'11.5rem'}>
-            {ressources.map((ressource, index) => (
-              <Tile key={'ressource-' + index} {...ressource} />
-            ))}
-          </TileGroup>
+          <Ressources />
         </Section>
       </ScrollspyContent>
 
