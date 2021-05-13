@@ -2,11 +2,9 @@ import React from 'react';
 
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import {
-  faGithubAlt,
-  faOctopusDeploy,
-} from '@fortawesome/free-brands-svg-icons';
-import {
+  faTerminal,
   faCoffee,
   faAddressCard,
   faHashtag,
@@ -67,7 +65,7 @@ export const Portfolio = () => {
         </Profile>
       </ScrollspyExtra>
 
-      <ScrollspyContent icon={faOctopusDeploy} label={'intro'}>
+      <ScrollspyContent icon={faTerminal} label={'intro'}>
         <Section bgcolor={color.dark}>
           <Intro />
         </Section>
