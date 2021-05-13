@@ -21,6 +21,18 @@ type Ressource = {
   bgcolor?: string;
 };
 
+/*
+ _______________
+< /r/startpages >
+ ---------------
+  \
+  \ ^__^
+    (oo)\________
+    (__)\        )\/\
+        ||----W ||
+        ||      ||
+*/
+
 export const ressources: Ressource[] = [
   {
     title: 'Awesome React Components',
