@@ -33,6 +33,7 @@ export const StyledTile = styled.a<StyledTileProps>`
       height: 100%;
       width: 100%;
       top: calc(100% - ${space.lg});
+      z-index: 1;
     }
 
     > img {
@@ -43,15 +44,36 @@ export const StyledTile = styled.a<StyledTileProps>`
       object-fit: cover;
     }
 
-    * {
+    ::before,
+    ::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: ${color.dark};
+    }
+    ::before {
+      top: 0;
+      opacity: 0.6;
+    }
+    ::after {
+      top: 100%;
+      opacity: 0.4;
+    }
+
+    *,
+    ::before,
+    ::after {
       transition: 0.3s;
     }
 
     :hover {
-      > article {
+      > article,
+      ::after {
         top: 0;
       }
-      > img {
+      > img,
+      ::before {
         top: -100%;
       }
     }
