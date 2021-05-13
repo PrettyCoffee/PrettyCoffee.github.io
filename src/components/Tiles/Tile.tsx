@@ -15,7 +15,7 @@ type StyledTileProps = {
 
 export const StyledTile = styled.a<StyledTileProps>`
   ${({
-    theme: { color, space },
+    theme: { color, space, animation },
     columns = 1,
     rows = 1,
     bgcolor = color.dark,
@@ -34,11 +34,14 @@ export const StyledTile = styled.a<StyledTileProps>`
       width: 100%;
       top: calc(100% - ${space.lg});
       z-index: 1;
+      > p {
+        transform: scaley(0);
+      }
     }
 
     > img {
       position: absolute;
-      top: 0;
+      bottom: 0;
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -48,12 +51,12 @@ export const StyledTile = styled.a<StyledTileProps>`
     ::after {
       content: '';
       position: absolute;
-      height: 100%;
+      height: 150%;
       width: 100%;
       background-color: ${color.dark};
     }
     ::before {
-      top: 0;
+      bottom: 0;
       opacity: 0.6;
     }
     ::after {
@@ -64,17 +67,23 @@ export const StyledTile = styled.a<StyledTileProps>`
     *,
     ::before,
     ::after {
-      transition: 0.5s;
+      transition: 0.6s ${animation.bouncy};
     }
 
     :hover {
+      > article > p {
+        transform: scaley(1);
+      }
       > article,
       ::after {
         top: 0;
       }
+      > img {
+        transform: scaley(0);
+      }
       > img,
       ::before {
-        top: -100%;
+        bottom: 100%;
       }
     }
   `}
