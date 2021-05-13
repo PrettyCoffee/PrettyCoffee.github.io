@@ -23,7 +23,7 @@ const CardWrapper = styled.a<{ color: string }>`
     z-index: 1;
 
     background-color: black;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   ::before {
     top: 0;
@@ -72,7 +72,7 @@ const CardContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
+  transition: 0.5s;
 `;
 
 const CardLabel = styled(CardContent)`

@@ -64,7 +64,7 @@ export const StyledTile = styled.a<StyledTileProps>`
     *,
     ::before,
     ::after {
-      transition: 0.3s;
+      transition: 0.5s;
     }
 
     :hover {

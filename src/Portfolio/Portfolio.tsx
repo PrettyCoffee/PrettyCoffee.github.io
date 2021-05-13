@@ -92,7 +92,19 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyExtra>
-        <Button>Action</Button>
+        <Button
+          onClick={() => {
+            const useDarkTheme =
+              localStorage.getItem('use-dark-theme') === 'true';
+            localStorage.setItem(
+              'use-dark-theme',
+              useDarkTheme ? 'false' : 'true'
+            );
+            window.location.reload();
+          }}
+        >
+          Action
+        </Button>
       </ScrollspyExtra>
     </Scrollspy>
   );
