@@ -103,7 +103,7 @@ export const Portfolio = () => {
             window.location.reload();
           }}
         >
-          Action
+          Toggle Colors
         </Button>
       </ScrollspyExtra>
     </Scrollspy>

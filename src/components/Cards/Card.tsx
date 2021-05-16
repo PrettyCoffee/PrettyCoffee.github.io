@@ -23,7 +23,7 @@ const CardWrapper = styled.a<{ color: string }>`
     z-index: 1;
 
     background-color: black;
-    transition: 0.6s ${({ theme }) => theme.animation.bouncy};
+    transition: 0.4s ease;
   }
   ::before {
     top: 0;
@@ -37,7 +37,6 @@ const CardWrapper = styled.a<{ color: string }>`
     opacity: 0.4;
   }
   [datatype='text'] {
-    transform: scaleY(0);
   }
 
   :hover,
@@ -51,7 +50,6 @@ const CardWrapper = styled.a<{ color: string }>`
       top: 0;
     }
     [datatype='icon'] {
-      transform: scaleY(0);
       bottom: 10rem;
       top: -10rem;
       /*
@@ -62,7 +60,6 @@ const CardWrapper = styled.a<{ color: string }>`
     }
     [datatype='text'] {
       top: 0;
-      transform: scaleY(1);
     }
   }
 `;
@@ -77,7 +74,7 @@ const CardContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.6s ${({ theme }) => theme.animation.bouncy};
+  transition: 0.4s ease;
 `;
 
 const CardLabel = styled(CardContent)`

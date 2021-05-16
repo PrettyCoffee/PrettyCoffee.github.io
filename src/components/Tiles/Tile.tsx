@@ -34,9 +34,6 @@ export const StyledTile = styled.a<StyledTileProps>`
       width: 100%;
       top: calc(100% - ${space.lg});
       z-index: 1;
-      > p {
-        transform: scaley(0);
-      }
     }
 
     > img {
@@ -67,19 +64,13 @@ export const StyledTile = styled.a<StyledTileProps>`
     *,
     ::before,
     ::after {
-      transition: 0.6s ${animation.bouncy};
+      transition: 0.5s;
     }
 
     :hover {
-      > article > p {
-        transform: scaley(1);
-      }
       > article,
       ::after {
         top: 0;
-      }
-      > img {
-        transform: scaley(0);
       }
       > img,
       ::before {
