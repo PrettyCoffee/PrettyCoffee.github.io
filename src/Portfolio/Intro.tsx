@@ -9,8 +9,9 @@ const TyperContainer = styled.div`
   width: 500px;
   font-size: ${({ theme }) => theme.space.xl};
   ${({ theme }) => theme.breakpoints.small} {
-    width: 250px;
-    font-size: ${({ theme }) => theme.space.lg};
+    width: auto;
+    font-size: 2.5rem;
+    margin: 0 auto;
   }
   margin: 0 auto;
 `;

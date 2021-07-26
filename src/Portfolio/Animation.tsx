@@ -25,10 +25,10 @@ const StyledAnimation = styled.div`
       }
     }
 
-    ${breakpoints.mobile} {
+    ${breakpoints.tablet} {
       position: relative;
       display: block;
-      height: 200px;
+      height: 250px;
       > img {
         position: absolute;
       }
@@ -52,13 +52,15 @@ const Computer = styled.img`
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
 
     ${breakpoints.tablet} {
-      width: 333px;
+      left: -300px;
+      bottom: 10px;
     }
-    @media only screen and (max-width: 850px) {
+    ${breakpoints.mobile} {
+      width: 333px;
       left: -200px;
       bottom: 10px;
     }
-    @media only screen and (max-width: 450px) {
+    ${breakpoints.small} {
       left: -166px;
     }
   `}
@@ -71,13 +73,15 @@ const Tablet = styled.img`
     animation-delay: 0.5s;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
     ${breakpoints.tablet} {
-      width: 100px;
+      left: 100px;
+      bottom: 0;
     }
-    @media only screen and (max-width: 850px) {
+    ${breakpoints.mobile} {
+      width: 100px;
       left: 70px;
       bottom: 0;
     }
-    @media only screen and (max-width: 450px) {
+    ${breakpoints.small} {
       left: 0px;
     }
   `}
@@ -91,13 +95,15 @@ const Smartphone = styled.img`
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
 
     ${breakpoints.tablet} {
-      width: 46px;
+      left: 220px;
+      bottom: -10px;
     }
-    @media only screen and (max-width: 850px) {
+    ${breakpoints.mobile} {
+      width: 46px;
       left: 150px;
       bottom: -10px;
     }
-    @media only screen and (max-width: 450px) {
+    ${breakpoints.small} {
       left: 70px;
     }
   `}
