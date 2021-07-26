@@ -6,7 +6,7 @@ import {
   faGithub,
   faGitlab,
   faReddit,
-  faXing,
+  faNpm,
   faSteam,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -16,13 +16,6 @@ export const SocialMedia = () => {
   const { color } = useTheme();
   return (
     <CardGroup>
-      <Card
-        url={'https://www.xing.com/profile/Jonathan_Holz2'}
-        icon={faXing}
-        color={color.green}
-      >
-        Jonathan Holz
-      </Card>
       <Card
         url={'https://github.com/PrettyCoffee'}
         icon={faGithub}
@@ -36,6 +29,13 @@ export const SocialMedia = () => {
         color={color.purple}
       >
         PrettyCoffee
+      </Card>
+      <Card
+        url={'https://www.npmjs.com/~prettycoffee'}
+        icon={faNpm}
+        color={color.green}
+      >
+        ~prettycoffee
       </Card>
       <Card
         url={'https://www.youtube.com/channel/UCtQqZ6EhvprvC0H2tLN2EcA'}

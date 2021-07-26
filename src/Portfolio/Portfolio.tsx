@@ -18,10 +18,11 @@ import {
 } from '../components';
 import logo from '../data/media/logo.svg';
 import { Intro } from './Intro';
+import { Profile } from './Profile';
 import { Ressources } from './Ressources';
 import { SocialMedia } from './SocialMedia';
 
-const Profile = styled.div`
+const Avatar = styled.div`
   ${({ theme: { border, space } }) => css`
     width: 50px;
     height: 50px;
@@ -60,9 +61,9 @@ export const Portfolio = () => {
   return (
     <Scrollspy>
       <ScrollspyExtra>
-        <Profile>
+        <Avatar>
           <img src={logo} alt={'avatar'} />
-        </Profile>
+        </Avatar>
       </ScrollspyExtra>
 
       <ScrollspyContent icon={faTerminal} label={'intro'}>
@@ -72,7 +73,9 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyContent icon={faAddressCard} label={'about me'}>
-        <Section bgcolor={color.light}></Section>
+        <Section bgcolor={color.light}>
+          <Profile />
+        </Section>
       </ScrollspyContent>
 
       <ScrollspyContent icon={faGithubAlt} label={'projects'}>
@@ -85,7 +88,7 @@ export const Portfolio = () => {
         </Section>
       </ScrollspyContent>
 
-      <ScrollspyContent icon={faHashtag} label={'follow me'}>
+      <ScrollspyContent icon={faHashtag} label={'social'}>
         <Section bgcolor={color.dark}>
           <SocialMedia />
         </Section>

@@ -38,6 +38,7 @@ declare module '@emotion/react' {
       bouncy: string;
     };
     breakpoints: {
+      small: string;
       mobile: string;
       tablet: string;
       laptop: string;

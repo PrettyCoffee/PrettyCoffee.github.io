@@ -49,9 +49,5 @@ export const Section = ({
   children,
   ...props
 }: React.PropsWithChildren<SectionProps>) => {
-  return (
-    <StyledSection {...props}>
-      <Reveal effect={'fadeIn'}>{children}</Reveal>
-    </StyledSection>
-  );
+  return <StyledSection {...props}>{children}</StyledSection>;
 };

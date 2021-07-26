@@ -54,8 +54,9 @@ const animation = {
 };
 
 const breakpoints = {
-  mobile: '@media only screen and (max-width: 700px)',
-  tablet: '@media only screen and (max-width: 1024px)',
+  small: '@media only screen and (max-width: 550px)',
+  mobile: '@media only screen and (max-width: 800px)',
+  tablet: '@media only screen and (max-width: 1050px)',
   laptop: '@media only screen and (max-width: 1440px)',
 };
 

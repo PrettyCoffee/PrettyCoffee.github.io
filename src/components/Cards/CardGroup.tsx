@@ -6,7 +6,7 @@ export const CardGroup = styled.div`
   ${({ theme }) => theme.breakpoints.tablet} {
     grid-template-columns: auto auto;
   }
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.small} {
     grid-template-columns: auto;
   }
 `;
