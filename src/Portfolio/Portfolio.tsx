@@ -80,7 +80,7 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyExtra>
-        <Button>Button</Button>
+        <Button>Blub</Button>
       </ScrollspyExtra>
     </Scrollspy>
   );
