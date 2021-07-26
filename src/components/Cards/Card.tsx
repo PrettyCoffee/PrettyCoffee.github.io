@@ -13,7 +13,6 @@ const CardWrapper = styled.a<{ color: string }>`
     background-color: ${color};
     box-shadow: ${shadow.regular};
     float: left;
-    margin: 20px;
     overflow: hidden;
 
     ::before,

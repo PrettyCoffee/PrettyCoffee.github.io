@@ -28,7 +28,6 @@ export const projects: Year[] = [
           'The latest version of my portfolio. You are currently looking at it.',
         image: avatar,
         repoUrl: 'https://github.com/PrettyCoffee/PrettyCoffee.github.io',
-        demoUrl: 'https://prettycoffee.github.io/',
       },
       {
         title: 'Fluidity',
