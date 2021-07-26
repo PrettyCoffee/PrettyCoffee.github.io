@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "lint": "eslint --ext .ts,.tsx src/",
     "lint:fix": "npm run lint -- --fix",
