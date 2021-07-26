@@ -1,67 +1,65 @@
 import React from 'react';
 
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CardWrapper = styled.a<{ color: string }>`
-  position: relative;
-  width: 14.14rem;
-  height: 10rem;
-  background-color: ${({ color }) => color};
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  float: left;
-  margin: 20px;
-  overflow: hidden;
+  ${({ theme: { shadow }, color }) => css`
+    position: relative;
+    width: 14.14rem;
+    height: 10rem;
+    background-color: ${color};
+    box-shadow: ${shadow.regular};
+    float: left;
+    margin: 20px;
+    overflow: hidden;
 
-  ::before,
-  ::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: 1;
-
-    background-color: black;
-    transition: 0.4s ease;
-  }
-  ::before {
-    top: 0;
-    bottom: 0;
-    opacity: 0.6;
-  }
-
-  ::after {
-    top: 10rem;
-    bottom: 0;
-    opacity: 0.4;
-  }
-  [datatype='text'] {
-  }
-
-  :hover,
-  :active,
-  :focus {
-    outline: none;
-    ::before {
-      bottom: 10rem;
-    }
+    ::before,
     ::after {
-      top: 0;
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 1;
+
+      background-color: black;
+      transition: 0.4s ease;
     }
-    [datatype='icon'] {
-      bottom: 10rem;
-      top: -10rem;
-      /*
-      height: ${({ theme }) => theme.space.xl};
-      width: ${({ theme }) => theme.space.xl};
-      font-size: ${({ theme }) => theme.space.md};
-      */
+    ::before {
+      top: 0;
+      bottom: 0;
+      opacity: 0.6;
+    }
+
+    ::after {
+      top: 10rem;
+      bottom: 0;
+      opacity: 0.4;
     }
     [datatype='text'] {
-      top: 0;
     }
-  }
+
+    :hover,
+    :active,
+    :focus {
+      outline: none;
+      ::before {
+        bottom: 10rem;
+      }
+      ::after {
+        top: 0;
+      }
+      [datatype='icon'] {
+        bottom: 10rem;
+        top: -10rem;
+      }
+      [datatype='text'] {
+        top: 0;
+      }
+    }
+  `}
 `;
 
 const CardContent = styled.div`

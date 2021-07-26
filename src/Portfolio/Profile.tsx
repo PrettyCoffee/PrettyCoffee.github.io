@@ -12,7 +12,7 @@ const textWidth = height - gap * 2;
 const picWidth = width - textWidth - gap * 3;
 
 const StyledProfile = styled.div`
-  ${({ theme: { color, breakpoints } }) => css`
+  ${({ theme: { color, breakpoints, shadow } }) => css`
     box-sizing: border-box;
     width: ${width}px;
     min-height: ${height}px;
@@ -20,7 +20,7 @@ const StyledProfile = styled.div`
     display: flex;
 
     background-color: ${color.dark};
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: ${shadow.regular};
     padding: ${gap}px;
 
     display: grid;
@@ -54,14 +54,14 @@ const LeftColumn = styled.div`
 `;
 
 const Picture = styled.img`
-  ${({ theme: { color } }) => css`
+  ${({ theme: { color, shadow } }) => css`
     width: ${picWidth}px;
     height: ${picWidth}px;
     border: 4px solid ${color.light};
     padding: 20px;
     object-fit: contain;
     box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: ${shadow.regular};
   `}
 `;
 

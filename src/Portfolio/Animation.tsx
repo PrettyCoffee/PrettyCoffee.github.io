@@ -45,11 +45,16 @@ const StyledAnimation = styled.div`
   `}
 `;
 
-const Computer = styled.img`
-  ${({ theme: { animation, breakpoints } }) => css`
-    width: 500px;
+const Device = styled.img`
+  ${({ theme: { animation, shadow } }) => css`
     animation: jump 3s ${animation.bouncy} infinite;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(${shadow.small});
+  `}
+`;
+
+const Computer = styled(Device)`
+  ${({ theme: { breakpoints } }) => css`
+    width: 500px;
 
     ${breakpoints.tablet} {
       left: -300px;
@@ -66,12 +71,10 @@ const Computer = styled.img`
   `}
 `;
 
-const Tablet = styled.img`
-  ${({ theme: { animation, breakpoints } }) => css`
+const Tablet = styled(Device)`
+  ${({ theme: { breakpoints } }) => css`
     width: 150px;
-    animation: jump 3s ${animation.bouncy} infinite;
     animation-delay: 0.5s;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
     ${breakpoints.tablet} {
       left: 100px;
       bottom: 0;
@@ -87,12 +90,10 @@ const Tablet = styled.img`
   `}
 `;
 
-const Smartphone = styled.img`
-  ${({ theme: { animation, breakpoints } }) => css`
+const Smartphone = styled(Device)`
+  ${({ theme: { breakpoints } }) => css`
     width: 70px;
-    animation: jump 3s ${animation.bouncy} infinite;
     animation-delay: 1s;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
 
     ${breakpoints.tablet} {
       left: 220px;
