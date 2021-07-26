@@ -2,27 +2,22 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import { Stalker, Typer } from '../components';
+import { Typer } from '../components';
+import { Animation } from './Animation';
 
-const StalkerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-bottom: 100px;
-`;
 const TyperContainer = styled.div`
   width: 500px;
   font-size: ${({ theme }) => theme.space.xl};
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.small} {
     width: 250px;
     font-size: ${({ theme }) => theme.space.lg};
   }
+  margin: 0 auto;
 `;
 
 export const Intro = () => (
   <>
-    <StalkerContainer>
-      <Stalker />
-    </StalkerContainer>
+    <Animation />
     <TyperContainer>
       <Typer
         text={`Welcome to my \n`}
