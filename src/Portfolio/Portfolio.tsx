@@ -15,10 +15,12 @@ import {
   ScrollspyExtra,
   ScrollspyContent,
   Section,
+  Button,
 } from '../components';
 import logo from '../data/media/logo.svg';
 import { Intro } from './Intro';
 import { Profile } from './Profile';
+import { Projects } from './Projects/Projects';
 import { Ressources } from './Ressources';
 import { SocialMedia } from './SocialMedia';
 
@@ -32,25 +34,6 @@ const Avatar = styled.div`
       width: 100%;
       height: 100%;
       mix-blend-mode: normal;
-    }
-  `}
-`;
-
-const Button = styled.button`
-  ${({ theme: { color, border, space } }) => css`
-    cursor: pointer;
-    color: ${color.light};
-    background-color: transparent;
-    border: ${border.light.sm};
-    padding: 0 ${space.sm};
-    height: ${space.lg};
-    transition: 0.3s;
-    :hover,
-    :active,
-    :focus {
-      color: ${color.dark};
-      background-color: ${color.light};
-      outline: none;
     }
   `}
 `;
@@ -79,7 +62,9 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyContent icon={faGithubAlt} label={'projects'}>
-        <Section bgcolor={color.dark}></Section>
+        <Section bgcolor={color.dark}>
+          <Projects />
+        </Section>
       </ScrollspyContent>
 
       <ScrollspyContent icon={faCoffee} label={'ressources'}>
@@ -95,19 +80,7 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyExtra>
-        <Button
-          onClick={() => {
-            const useDarkTheme =
-              localStorage.getItem('use-dark-theme') === 'true';
-            localStorage.setItem(
-              'use-dark-theme',
-              useDarkTheme ? 'false' : 'true'
-            );
-            window.location.reload();
-          }}
-        >
-          Toggle Colors
-        </Button>
+        <Button>Button</Button>
       </ScrollspyExtra>
     </Scrollspy>
   );

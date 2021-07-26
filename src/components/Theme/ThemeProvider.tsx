@@ -13,8 +13,8 @@ const { color } = getTheme();
 const globalStyles = css`
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 15px;
+    height: 15px;
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;

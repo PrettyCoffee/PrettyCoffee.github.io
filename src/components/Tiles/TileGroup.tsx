@@ -20,10 +20,13 @@ const StyledTileGroup = styled.div<TileGroupProps>`
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
 
     ${breakpoints.laptop} {
-      grid-template-columns: repeat(4, ${tileSize});
+      grid-template-columns: repeat(3, ${tileSize});
     }
-    ${breakpoints.tablet} {
+    ${breakpoints.mobile} {
       grid-template-columns: repeat(2, ${tileSize});
+    }
+    ${breakpoints.small} {
+      grid-template-columns: repeat(1, ${tileSize});
     }
   `}
 `;

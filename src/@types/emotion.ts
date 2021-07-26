@@ -34,6 +34,10 @@ declare module '@emotion/react' {
         lg: string;
       };
     };
+    shadow: {
+      regular: string;
+      small: string;
+    };
     animation: {
       bouncy: string;
     };

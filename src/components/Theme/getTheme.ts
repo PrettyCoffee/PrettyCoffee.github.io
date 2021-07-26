@@ -14,20 +14,6 @@ const color = {
   orange: 'rgb(255, 187, 124)',
 };
 
-const colorless = {
-  dark: 'rgb(40,44,52)',
-  light: 'rgb(220,223,228)',
-  grey: 'rgb(171,178,191)',
-
-  red: 'rgb(40,44,52)',
-  green: 'rgb(40,44,52)',
-  yellow: 'rgb(40,44,52)',
-  blue: 'rgb(40,44,52)',
-  purple: 'rgb(40,44,52)',
-  cyan: 'rgb(40,44,52)',
-  orange: 'rgb(40,44,52)',
-};
-
 const space = {
   xxs: '0.125rem',
   xs: '0.5rem',
@@ -49,6 +35,11 @@ const border = {
   },
 };
 
+const shadow = {
+  regular: '0 20px 50px rgba(0, 0, 0, 0.8)',
+  small: '0 10px 20px rgba(0, 0, 0, 0.8)',
+};
+
 const animation = {
   bouncy: 'cubic-bezier(0.65, -0.85, 0.35, 1.85)',
 };
@@ -60,13 +51,12 @@ const breakpoints = {
   laptop: '@media only screen and (max-width: 1440px)',
 };
 
-export const getTheme = () => {
-  const useDarkTheme = localStorage.getItem('use-dark-theme') === 'true';
-  return {
-    color: useDarkTheme ? colorless : color,
+export const getTheme = () =>
+  ({
+    color: color,
     space: space,
     border: border,
+    shadow: shadow,
     animation: animation,
     breakpoints: breakpoints,
-  } as Theme;
-};
+  } as Theme);
