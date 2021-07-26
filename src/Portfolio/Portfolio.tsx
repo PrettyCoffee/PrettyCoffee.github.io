@@ -25,7 +25,7 @@ import { Ressources } from './Ressources';
 import { SocialMedia } from './SocialMedia';
 
 const Avatar = styled.div`
-  ${({ theme: { border, space } }) => css`
+  ${({ theme: { border } }) => css`
     width: 50px;
     height: 50px;
     padding: 5px;
