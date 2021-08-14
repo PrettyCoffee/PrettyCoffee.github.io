@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import { ThemeProvider } from './components/Theme';
+import { ThemeProvider } from './components';
 import { Portfolio } from './Portfolio/Portfolio';
 
 const AppWrapper = styled.div`

@@ -54,7 +54,7 @@ const LeftColumn = styled.div`
 `;
 
 const Picture = styled.img`
-  ${({ theme: { color, shadow } }) => css`
+  ${({ theme: { color, shadow, breakpoints } }) => css`
     width: ${picWidth}px;
     height: ${picWidth}px;
     border: 4px solid ${color.light};
@@ -62,6 +62,10 @@ const Picture = styled.img`
     object-fit: contain;
     box-sizing: border-box;
     box-shadow: ${shadow.regular};
+    ${breakpoints.small} {
+      width: 100%;
+      height: unset;
+    }
   `}
 `;
 
@@ -90,6 +94,12 @@ const Text = styled.div`
 
     ${breakpoints.tablet} {
       width: 100%;
+    }
+    ${breakpoints.small} {
+      font-size: ${space.sm};
+      > h2 {
+        font-size: ${space.md};
+      }
     }
   `}
 `;

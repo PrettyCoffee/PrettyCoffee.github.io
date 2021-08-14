@@ -15,6 +15,18 @@ export type Project = {
   demoUrl?: string;
 };
 
+/*
+ _______________
+< /r/startpages >
+ ---------------
+  \
+  \ ^__^
+    (oo)\________
+    (__)\        )\/\
+        ||----W ||
+        ||      ||
+*/
+
 type Year = { year: number; color: string; projects: Project[] };
 
 export const projects: Year[] = [
@@ -28,7 +40,6 @@ export const projects: Year[] = [
           'The latest version of my portfolio. You are currently looking at it.',
         image: avatar,
         repoUrl: 'https://github.com/PrettyCoffee/PrettyCoffee.github.io',
-        demoUrl: 'https://prettycoffee.github.io/',
       },
       {
         title: 'Fluidity',
