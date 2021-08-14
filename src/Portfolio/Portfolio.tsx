@@ -7,7 +7,7 @@ import {
   faTerminal,
   faAddressCard,
   faHashtag,
-  faDiceD6,
+  faPaintBrush,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -67,7 +67,7 @@ export const Portfolio = () => {
         </Section>
       </ScrollspyContent>
 
-      <ScrollspyContent icon={faDiceD6} label={'playground'}>
+      <ScrollspyContent icon={faPaintBrush} label={'playground'}>
         <Section bgcolor={color.light}>
           <ShadowPlay />
         </Section>
