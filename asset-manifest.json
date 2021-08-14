@@ -1,37 +1,28 @@
 {
   "files": {
-    "main.js": "/static/js/main.dbe21b73.chunk.js",
-    "main.js.map": "/static/js/main.dbe21b73.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.09210107.js",
-    "runtime-main.js.map": "/static/js/runtime-main.09210107.js.map",
-    "static/js/2.92cc8db3.chunk.js": "/static/js/2.92cc8db3.chunk.js",
-    "static/js/2.92cc8db3.chunk.js.map": "/static/js/2.92cc8db3.chunk.js.map",
-    "static/js/3.291dff89.chunk.js": "/static/js/3.291dff89.chunk.js",
-    "static/js/3.291dff89.chunk.js.map": "/static/js/3.291dff89.chunk.js.map",
+    "main.js": "/static/js/main.f4d36f3a.chunk.js",
+    "main.js.map": "/static/js/main.f4d36f3a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6200fb21.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6200fb21.js.map",
+    "static/js/2.f778f6cd.chunk.js": "/static/js/2.f778f6cd.chunk.js",
+    "static/js/2.f778f6cd.chunk.js.map": "/static/js/2.f778f6cd.chunk.js.map",
+    "static/js/3.408c0238.chunk.js": "/static/js/3.408c0238.chunk.js",
+    "static/js/3.408c0238.chunk.js.map": "/static/js/3.408c0238.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.92cc8db3.chunk.js.LICENSE.txt": "/static/js/2.92cc8db3.chunk.js.LICENSE.txt",
+    "static/js/2.f778f6cd.chunk.js.LICENSE.txt": "/static/js/2.f778f6cd.chunk.js.LICENSE.txt",
     "static/media/avatar.fa89cc50.png": "/static/media/avatar.fa89cc50.png",
-    "static/media/awesome.464f8c12.svg": "/static/media/awesome.464f8c12.svg",
     "static/media/computer.ba55b973.svg": "/static/media/computer.ba55b973.svg",
     "static/media/fluidity.c2fec930.svg": "/static/media/fluidity.c2fec930.svg",
     "static/media/go-audio.76d6a55b.png": "/static/media/go-audio.76d6a55b.png",
-    "static/media/google-fonts.eabadd2f.svg": "/static/media/google-fonts.eabadd2f.svg",
-    "static/media/iris.dfd01b58.svg": "/static/media/iris.dfd01b58.svg",
     "static/media/kitty.4387a5b9.png": "/static/media/kitty.4387a5b9.png",
-    "static/media/laws-of-ux.a68aef8e.svg": "/static/media/laws-of-ux.a68aef8e.svg",
     "static/media/logo.9ce72a06.svg": "/static/media/logo.9ce72a06.svg",
-    "static/media/pupil.39b2ec41.svg": "/static/media/pupil.39b2ec41.svg",
-    "static/media/react-hooks.3559b92f.svg": "/static/media/react-hooks.3559b92f.svg",
-    "static/media/sclera.93060283.svg": "/static/media/sclera.93060283.svg",
     "static/media/smartphone.e18b1faa.svg": "/static/media/smartphone.e18b1faa.svg",
     "static/media/smug.9792ee4a.jpg": "/static/media/smug.9792ee4a.jpg",
-    "static/media/startpages.464e93a8.svg": "/static/media/startpages.464e93a8.svg",
-    "static/media/tablet.97fe932b.svg": "/static/media/tablet.97fe932b.svg",
-    "static/media/webdev.c8cd2718.png": "/static/media/webdev.c8cd2718.png"
+    "static/media/tablet.97fe932b.svg": "/static/media/tablet.97fe932b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.09210107.js",
-    "static/js/2.92cc8db3.chunk.js",
-    "static/js/main.dbe21b73.chunk.js"
+    "static/js/runtime-main.6200fb21.js",
+    "static/js/2.f778f6cd.chunk.js",
+    "static/js/main.f4d36f3a.chunk.js"
   ]
 }
