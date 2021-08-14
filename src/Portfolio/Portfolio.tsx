@@ -5,9 +5,9 @@ import styled from '@emotion/styled';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import {
   faTerminal,
-  faCoffee,
   faAddressCard,
   faHashtag,
+  faDiceD6,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -21,7 +21,7 @@ import logo from '../data/media/logo.svg';
 import { Intro } from './Intro';
 import { Profile } from './Profile';
 import { Projects } from './Projects/Projects';
-import { Ressources } from './Ressources';
+import { ShadowPlay } from './ShadowPlay';
 import { SocialMedia } from './SocialMedia';
 
 const Avatar = styled.div`
@@ -67,9 +67,9 @@ export const Portfolio = () => {
         </Section>
       </ScrollspyContent>
 
-      <ScrollspyContent icon={faCoffee} label={'ressources'}>
+      <ScrollspyContent icon={faDiceD6} label={'playground'}>
         <Section bgcolor={color.light}>
-          <Ressources />
+          <ShadowPlay />
         </Section>
       </ScrollspyContent>
 
