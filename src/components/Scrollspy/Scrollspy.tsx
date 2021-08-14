@@ -23,7 +23,7 @@ export const Scrollspy = ({ children }: ScrollspyProps) => {
 
   React.useEffect(() => {
     screenSections.forEach((section, index) => {
-      if (section.ystart <= scrollPosition) setCurrentSection(index);
+      if (section.ystart <= scrollPosition + 100) setCurrentSection(index);
     });
   }, [scrollPosition, screenSections]);
 
