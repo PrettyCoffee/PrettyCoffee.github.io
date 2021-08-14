@@ -15,6 +15,18 @@ export type Project = {
   demoUrl?: string;
 };
 
+/*
+ _______________
+< /r/startpages >
+ ---------------
+  \
+  \ ^__^
+    (oo)\________
+    (__)\        )\/\
+        ||----W ||
+        ||      ||
+*/
+
 type Year = { year: number; color: string; projects: Project[] };
 
 export const projects: Year[] = [
