@@ -19,9 +19,9 @@ import {
 } from '../components';
 import logo from '../data/media/logo.svg';
 import { Intro } from './Intro';
+import { Playground } from './Playground/Playground';
 import { Profile } from './Profile';
 import { Projects } from './Projects/Projects';
-import { ShadowPlay } from './ShadowPlay';
 import { SocialMedia } from './SocialMedia';
 
 const Avatar = styled.div`
@@ -69,7 +69,7 @@ export const Portfolio = () => {
 
       <ScrollspyContent icon={faPaintBrush} label={'playground'}>
         <Section bgcolor={color.light}>
-          <ShadowPlay />
+          <Playground />
         </Section>
       </ScrollspyContent>
 

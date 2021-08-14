@@ -1,4 +1,5 @@
 export * from './Button';
+export * from './Carousel';
 export * from './Cards';
 export * from './DirectionButton';
 export * from './Scrollspy';

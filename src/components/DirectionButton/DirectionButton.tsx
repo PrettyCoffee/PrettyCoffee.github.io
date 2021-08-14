@@ -75,23 +75,21 @@ const ArrowLeft = styled(ArrowButton)`
 `;
 
 export type DirectionButtonProps = {
-  onLeftClick?: () => void;
-  onRightClick?: () => void;
+  onClick?: (direction: 'left' | 'right') => void;
   hideLeft?: boolean;
   hideRight?: boolean;
   size?: 'small' | 'medium' | 'large';
 };
 
 export const DirectionButton = ({
-  onLeftClick,
-  onRightClick,
+  onClick,
   hideLeft,
   hideRight,
   size,
 }: DirectionButtonProps) => (
   <Wrapper size={size}>
     <Seperator />
-    {!hideLeft && <ArrowLeft onClick={onLeftClick} />}
-    {!hideRight && <ArrowRight onClick={onRightClick} />}
+    {!hideLeft && <ArrowLeft onClick={() => onClick?.('left')} />}
+    {!hideRight && <ArrowRight onClick={() => onClick?.('right')} />}
   </Wrapper>
 );
