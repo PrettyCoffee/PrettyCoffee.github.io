@@ -26,7 +26,6 @@ const globalStyles = css`
   body {
     margin: 0;
     overflow: overlay;
-    width: 100vw;
     color: ${color.light};
   }
   * {

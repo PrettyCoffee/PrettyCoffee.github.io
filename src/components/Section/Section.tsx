@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 
 const StyledSection = styled.section<{ bgcolor?: string }>`
   ${({ theme: { color, breakpoints }, bgcolor = color.dark }) => css`
-    width: 100vw;
     min-height: 100vh;
     position: relative;
     background-color: ${bgcolor};
