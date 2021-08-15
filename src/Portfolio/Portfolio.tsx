@@ -15,7 +15,6 @@ import {
   ScrollspyExtra,
   ScrollspyContent,
   Section,
-  Button,
 } from '../components';
 import logo from '../data/media/logo.svg';
 import { Intro } from './Intro';
@@ -23,6 +22,28 @@ import { Playground } from './Playground/Playground';
 import { Profile } from './Profile';
 import { Projects } from './Projects/Projects';
 import { SocialMedia } from './SocialMedia';
+
+const Square = styled.div<{ num: number }>`
+  ${({ theme: { border, color }, num }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.414rem;
+    width: 2rem;
+    ::before {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      position: relative;
+      z-index: ${num};
+      background-color: ${num !== 1 ? 'white' : 'black'};
+      border: 2px solid white;
+      height: 2rem;
+      width: 2rem;
+      transform: rotate(45deg);
+    }
+  `}
+`;
 
 const Avatar = styled.div`
   ${({ theme: { border } }) => css`
@@ -80,7 +101,9 @@ export const Portfolio = () => {
       </ScrollspyContent>
 
       <ScrollspyExtra>
-        <Button>Blub</Button>
+        <Square num={0} />
+        <Square num={1} />
+        <Square num={0} />
       </ScrollspyExtra>
     </Scrollspy>
   );
