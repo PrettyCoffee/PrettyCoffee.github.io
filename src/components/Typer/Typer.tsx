@@ -4,13 +4,13 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const StyledTyper = styled.div`
-  ${({ theme: { color, space } }) => css`
-    width: 100%;
-    box-sizing: border-box;
-    white-space: break-spaces;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: break-spaces;
+`;
 
-    ::after {
-      content: '';
+const Carret = styled.span`
+  ${({ theme: { color, space } }) => css`
       height: ${space.xxs};
       width: ${space.md};
       margin-left: ${space.xs};
@@ -114,5 +114,10 @@ export const Typer = ({
     intervalId.current = setInterval(intervalUpdater, typeStrokes);
   }, []);
 
-  return <StyledTyper>{content}</StyledTyper>;
+  return (
+    <StyledTyper>
+      {content}
+      <Carret />
+    </StyledTyper>
+  );
 };
