@@ -20,7 +20,7 @@ const StyledMenuItem = styled.button<{ active: boolean }>`
     border: none;
     border-radius: 0;
     outline: none;
-    overflow-y: hidden;
+    overflow-y: clip;
 
     background-color: transparent;
     color: inherit;
