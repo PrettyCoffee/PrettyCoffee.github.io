@@ -1,18 +1,69 @@
 import { Theme } from '@emotion/react';
 
-const color = {
-  dark: 'rgb(40,44,52)',
-  light: 'rgb(220,223,228)',
-  grey: 'rgb(171,178,191)',
+// for grey: https://www.colorhexa.com/282a36-to-f8f8f2 -> 4th from light
 
-  red: 'rgb(224,108,117)',
-  green: 'rgb(152,195,121)',
-  yellow: 'rgb(229,192,123)',
-  blue: 'rgb(97,175,239)',
-  purple: 'rgb(198,120,221)',
-  cyan: 'rgb(86,182,194)',
-  orange: 'rgb(255, 187, 124)',
+const schemes = {
+  atom: {
+    dark: '#282C34',
+    light: '#DCDFE4',
+    grey: '#AFB2B8',
+
+    red: '#E06C75',
+    green: '#98C379',
+    yellow: '#E5C07B',
+    blue: '#61AFEF',
+    purple: '#C678DD',
+    cyan: '#56B6C2',
+    orange: '#FFBB7C',
+  },
+
+  // https://github.com/dracula/dracula-theme
+  dracula: {
+    dark: '#282a36',
+    light: '#f8f8f2',
+    grey: '#c4c4c3',
+
+    red: '#ff5555',
+    green: '#50fa7b',
+    yellow: '#f1fa8c',
+    blue: '#6272a4',
+    purple: '#bd93f9',
+    cyan: '#8be9fd',
+    orange: '#ffb86c',
+  },
+
+  //https://github.com/arcticicestudio/nord
+  nord: {
+    dark: '#2E3541',
+    light: '#ECEFF4',
+    grey: '#bdc1c7',
+
+    red: '#BF616A',
+    green: '#A3BE8C',
+    yellow: '#EBCB8B',
+    blue: '#5E81AC',
+    purple: '#B48EAD',
+    cyan: '#88C0D0',
+    orange: '#D08770',
+  },
+
+  //https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+  material: {
+    dark: '#263238',
+    light: '#eceff1',
+    grey: '#b0bec5',
+
+    red: '#ef5350',
+    green: '#66bb6a',
+    yellow: '#ffee58',
+    blue: '#42a5f5',
+    purple: '#ab47bc',
+    cyan: '#26c6da',
+    orange: '#ffa726',
+  },
 };
+
+const currentTheme = schemes.atom;
 
 const space = {
   xxs: '0.125rem',
@@ -26,12 +77,12 @@ const space = {
 
 const border = {
   light: {
-    sm: space.xxs + ' solid ' + color.light,
-    lg: space.xs + ' solid ' + color.light,
+    sm: space.xxs + ' solid ' + currentTheme.light,
+    lg: space.xs + ' solid ' + currentTheme.light,
   },
   dark: {
-    sm: space.xxs + ' solid ' + color.dark,
-    lg: space.xs + ' solid ' + color.dark,
+    sm: space.xxs + ' solid ' + currentTheme.dark,
+    lg: space.xs + ' solid ' + currentTheme.dark,
   },
 };
 
@@ -53,7 +104,7 @@ const breakpoints = {
 
 export const getTheme = () =>
   ({
-    color: color,
+    color: currentTheme,
     space: space,
     border: border,
     shadow: shadow,
