@@ -129,7 +129,7 @@ export const Profile = () => (
       <h2>About Me</h2>
       <p>
         I am a 25 year old professional <K>web developer</K> which acquired his{' '}
-        informatics degree in 2021 and is employed since then as a web
+        informatics degree in 2020 and is employed since then as a web
         developer.
         <br />
         <br />
