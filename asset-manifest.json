@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.7bb48aec.chunk.js",
-    "main.js.map": "/static/js/main.7bb48aec.chunk.js.map",
+    "main.js": "/static/js/main.017473f2.chunk.js",
+    "main.js.map": "/static/js/main.017473f2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6200fb21.js",
     "runtime-main.js.map": "/static/js/runtime-main.6200fb21.js.map",
     "static/js/2.d459437a.chunk.js": "/static/js/2.d459437a.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/go-audio.76d6a55b.png": "/static/media/go-audio.76d6a55b.png",
     "static/media/kitty.4387a5b9.png": "/static/media/kitty.4387a5b9.png",
     "static/media/logo.9ce72a06.svg": "/static/media/logo.9ce72a06.svg",
+    "static/media/react-startpage.95e85efc.svg": "/static/media/react-startpage.95e85efc.svg",
     "static/media/smartphone.e18b1faa.svg": "/static/media/smartphone.e18b1faa.svg",
     "static/media/smug.9792ee4a.jpg": "/static/media/smug.9792ee4a.jpg",
     "static/media/tablet.97fe932b.svg": "/static/media/tablet.97fe932b.svg"
@@ -23,6 +24,6 @@
   "entrypoints": [
     "static/js/runtime-main.6200fb21.js",
     "static/js/2.d459437a.chunk.js",
-    "static/js/main.7bb48aec.chunk.js"
+    "static/js/main.017473f2.chunk.js"
   ]
 }
