@@ -3,6 +3,7 @@ import avatar from './media/avatar.png';
 import fluidity from './media/fluidity.svg';
 import goAudio from './media/go-audio.png';
 import kitty from './media/kitty.png';
+import rsp from './media/react-startpage.svg';
 import smug from './media/smug.jpg';
 
 const { color } = getTheme();
@@ -34,6 +35,14 @@ export const projects: Year[] = [
     year: 2021,
     color: color.red,
     projects: [
+      {
+        title: '@startpage [WIP]',
+        description:
+          'A library that provides tools and components to facilitate the process of creating a browser start page.',
+        image: rsp,
+        repoUrl: 'https://github.com/PrettyCoffee/startpage',
+        demoUrl: 'https://prettycoffee.github.io/startpage/',
+      },
       {
         title: 'Portfolio v3',
         description:
