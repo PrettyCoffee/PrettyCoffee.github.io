@@ -16,7 +16,7 @@ import {
   ScrollspyContent,
   Section,
 } from '../components';
-import logo from '../data/media/logo.svg';
+import logo from '../data/media/logo.png';
 import { Intro } from './Intro';
 import { Playground } from './Playground/Playground';
 import { Profile } from './Profile';
@@ -52,6 +52,7 @@ const Avatar = styled.div`
     padding: 5px;
     border: ${border.light.sm};
     > img {
+      object-fit: contain;
       width: 100%;
       height: 100%;
       mix-blend-mode: normal;
