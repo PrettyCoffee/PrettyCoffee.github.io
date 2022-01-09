@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled"
 
 export const StyledScrollspy = styled.div`
   position: fixed;
@@ -26,4 +26,4 @@ export const StyledScrollspy = styled.div`
     background-color: ${({ theme }) => theme.color.dark};
     mix-blend-mode: unset;
   }
-`;
+`

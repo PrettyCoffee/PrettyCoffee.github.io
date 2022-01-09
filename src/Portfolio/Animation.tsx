@@ -1,11 +1,9 @@
-import React from 'react';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
-import computer from '../data/media/computer.svg';
-import smartphone from '../data/media/smartphone.svg';
-import tablet from '../data/media/tablet.svg';
+import computer from "../data/media/computer.svg"
+import smartphone from "../data/media/smartphone.svg"
+import tablet from "../data/media/tablet.svg"
 
 const StyledAnimation = styled.div`
   ${({ theme: { breakpoints } }) => css`
@@ -43,14 +41,14 @@ const StyledAnimation = styled.div`
       }
     }
   `}
-`;
+`
 
 const Device = styled.img`
   ${({ theme: { animation, shadow } }) => css`
     animation: jump 3s ${animation.bouncy} infinite;
     filter: drop-shadow(${shadow.small});
   `}
-`;
+`
 
 const Computer = styled(Device)`
   ${({ theme: { breakpoints } }) => css`
@@ -69,7 +67,7 @@ const Computer = styled(Device)`
       left: -166px;
     }
   `}
-`;
+`
 
 const Tablet = styled(Device)`
   ${({ theme: { breakpoints } }) => css`
@@ -88,7 +86,7 @@ const Tablet = styled(Device)`
       left: 0px;
     }
   `}
-`;
+`
 
 const Smartphone = styled(Device)`
   ${({ theme: { breakpoints } }) => css`
@@ -108,7 +106,7 @@ const Smartphone = styled(Device)`
       left: 70px;
     }
   `}
-`;
+`
 
 export const Animation = () => {
   return (
@@ -117,5 +115,5 @@ export const Animation = () => {
       <Tablet src={tablet} />
       <Smartphone src={smartphone} />
     </StyledAnimation>
-  );
-};
+  )
+}

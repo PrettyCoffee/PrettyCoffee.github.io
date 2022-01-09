@@ -1,1 +1,1 @@
-export * from './Typer';
+export * from "./Typer"

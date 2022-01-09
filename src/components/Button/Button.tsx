@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome';
+} from "@fortawesome/react-fontawesome"
 
 const StyledButton = styled.button`
   ${({ theme: { color, border, space } }) => css`
@@ -33,23 +33,23 @@ const StyledButton = styled.button`
       margin-left: ${space.xs};
     }
   `}
-`;
+`
 
 type ButtonProps = {
-  icon?: FontAwesomeIconProps['icon'];
-  onClick?: () => void;
-  href?: string;
-  target?: string;
-  rel?: string;
-};
+  icon?: FontAwesomeIconProps["icon"]
+  onClick?: () => void
+  href?: string
+  target?: string
+  rel?: string
+}
 
 export const Button = ({
   children,
   icon,
   ...buttonProps
 }: React.PropsWithChildren<ButtonProps>) => (
-  <StyledButton as={buttonProps.href ? 'a' : 'button'} {...buttonProps}>
+  <StyledButton as={buttonProps.href ? "a" : "button"} {...buttonProps}>
     {children}
     {icon && <FontAwesomeIcon icon={icon} />}
   </StyledButton>
-);
+)

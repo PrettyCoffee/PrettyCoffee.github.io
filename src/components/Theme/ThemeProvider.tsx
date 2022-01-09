@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react"
 
 import {
   ThemeProvider as EmotionThemeProvider,
   Global,
   css,
-} from '@emotion/react';
+} from "@emotion/react"
 
-import { getTheme } from './getTheme';
+import { getTheme } from "./getTheme"
 
-const { color } = getTheme();
+const { color } = getTheme()
 
 const globalStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
   ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -29,7 +29,7 @@ const globalStyles = css`
     color: ${color.light};
   }
   * {
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     font-weight: 300;
   }
 
@@ -40,7 +40,7 @@ const globalStyles = css`
     }
     color: unset;
   }
-`;
+`
 
 export const ThemeProvider = ({
   children,
@@ -50,5 +50,5 @@ export const ThemeProvider = ({
       <Global styles={globalStyles} />
       <EmotionThemeProvider theme={getTheme()}>{children}</EmotionThemeProvider>
     </>
-  );
-};
+  )
+}

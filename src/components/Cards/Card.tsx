@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const CardWrapper = styled.a<{ color: string }>`
   ${({ theme: { shadow }, color }) => css`
@@ -17,7 +17,7 @@ const CardWrapper = styled.a<{ color: string }>`
 
     ::before,
     ::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 0;
       left: 0;
@@ -37,7 +37,7 @@ const CardWrapper = styled.a<{ color: string }>`
       bottom: 0;
       opacity: 0.4;
     }
-    [datatype='text'] {
+    [datatype="text"] {
     }
 
     :hover,
@@ -50,16 +50,16 @@ const CardWrapper = styled.a<{ color: string }>`
       ::after {
         top: 0;
       }
-      [datatype='icon'] {
+      [datatype="icon"] {
         bottom: 10rem;
         top: -10rem;
       }
-      [datatype='text'] {
+      [datatype="text"] {
         top: 0;
       }
     }
   `}
-`;
+`
 
 const CardContent = styled.div`
   color: ${({ theme }) => theme.color.light};
@@ -72,25 +72,25 @@ const CardContent = styled.div`
   justify-content: center;
   align-items: center;
   transition: 0.4s ease;
-`;
+`
 
 const CardLabel = styled(CardContent)`
   top: 10rem;
   font-weight: 500;
   font-size: ${({ theme }) => theme.space.md};
-`;
+`
 
 const CardIcon = styled(CardContent)`
   top: 0;
   right: 0;
   font-size: ${({ theme }) => theme.space.xl};
-`;
+`
 
 type CardProps = {
-  url: string;
-  icon: IconDefinition;
-  color: string;
-};
+  url: string
+  icon: IconDefinition
+  color: string
+}
 
 export const Card = ({
   url,
@@ -99,11 +99,11 @@ export const Card = ({
   color,
 }: React.PropsWithChildren<CardProps>) => {
   return (
-    <CardWrapper href={url} target={'_blank'} color={color}>
-      <CardIcon datatype={'icon'}>
+    <CardWrapper href={url} target={"_blank"} color={color}>
+      <CardIcon datatype={"icon"}>
         <FontAwesomeIcon icon={icon} />
       </CardIcon>
-      <CardLabel datatype={'text'}>{children}</CardLabel>
+      <CardLabel datatype={"text"}>{children}</CardLabel>
     </CardWrapper>
-  );
-};
+  )
+}

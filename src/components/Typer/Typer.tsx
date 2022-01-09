@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const StyledTyper = styled.div`
   width: 100%;
   box-sizing: border-box;
   white-space: break-spaces;
-`;
+`
 
 const Carret = styled.span`
   ${({ theme: { color, space } }) => css`
@@ -35,89 +35,91 @@ const Carret = styled.span`
       }
     }
   `}
-`;
+`
 
 type TyperProps = {
-  text: string;
-  textCarousel?: string[];
+  text: string
+  textCarousel?: string[]
   timing: {
-    typeStrokes: number;
-    deleteStrokes: number;
-    waiting: number;
-  };
-};
+    typeStrokes: number
+    deleteStrokes: number
+    waiting: number
+  }
+}
 
 export const Typer = ({
   text,
   textCarousel,
   timing: { typeStrokes, deleteStrokes, waiting },
 }: TyperProps) => {
-  const [content, setContent] = React.useState('');
-  const intervalId = React.useRef<NodeJS.Timeout>();
-  let initialCopy = '';
-  let carouselCopy = '';
+  const [content, setContent] = React.useState("")
+  const intervalId = React.useRef<NodeJS.Timeout>()
+  let initialCopy = ""
+  let carouselCopy = ""
 
   const addCarouselWord = (carouselIndex: number) => {
     if (textCarousel) {
-      const currentText = textCarousel[carouselIndex];
+      const currentText = textCarousel[carouselIndex]
       if (currentText) {
-        carouselCopy += currentText[carouselCopy.length];
-        setContent(initialCopy + carouselCopy);
+        carouselCopy += currentText[carouselCopy.length]
+        setContent(initialCopy + carouselCopy)
         if (intervalId.current && carouselCopy.length >= currentText.length) {
-          clearInterval(intervalId.current);
+          clearInterval(intervalId.current)
           setTimeout(
             () =>
               (intervalId.current = setInterval(
+                // eslint-disable-next-line @typescript-eslint/no-use-before-define
                 () => deleteCarouselWord(carouselIndex),
                 deleteStrokes
               )),
             waiting
-          );
+          )
         }
       }
     }
-  };
+  }
+
+  const getNextCarouselIndex = (index: number) => {
+    if (textCarousel && index >= textCarousel.length - 1) return 0
+    return index + 1
+  }
 
   const deleteCarouselWord = (carouselIndex: number) => {
     if (textCarousel) {
-      const currentText = textCarousel[carouselIndex];
+      const currentText = textCarousel[carouselIndex]
       if (currentText) {
-        carouselCopy = carouselCopy.slice(0, carouselCopy.length - 1);
-        setContent(initialCopy + carouselCopy);
+        carouselCopy = carouselCopy.slice(0, carouselCopy.length - 1)
+        setContent(initialCopy + carouselCopy)
         if (intervalId.current && carouselCopy.length === 0) {
-          clearInterval(intervalId.current);
+          clearInterval(intervalId.current)
           intervalId.current = setInterval(
             () => addCarouselWord(getNextCarouselIndex(carouselIndex)),
             typeStrokes
-          );
+          )
         }
       }
     }
-  };
-
-  const getNextCarouselIndex = (index: number) => {
-    if (textCarousel && index >= textCarousel.length - 1) return 0;
-    return index + 1;
-  };
+  }
 
   const intervalUpdater = () => {
-    initialCopy += text[initialCopy.length];
-    setContent(initialCopy);
+    initialCopy += text[initialCopy.length]
+    setContent(initialCopy)
     if (intervalId.current && initialCopy.length === text.length) {
-      clearInterval(intervalId.current);
+      clearInterval(intervalId.current)
       if (textCarousel)
-        intervalId.current = setInterval(() => addCarouselWord(0), typeStrokes);
+        intervalId.current = setInterval(() => addCarouselWord(0), typeStrokes)
     }
-  };
+  }
 
   React.useEffect(() => {
-    intervalId.current = setInterval(intervalUpdater, typeStrokes);
-  }, []);
+    intervalId.current = setInterval(intervalUpdater, typeStrokes)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <StyledTyper>
       {content}
       <Carret />
     </StyledTyper>
-  );
-};
+  )
+}

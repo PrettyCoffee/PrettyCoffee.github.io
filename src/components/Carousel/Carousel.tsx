@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
-import { DirectionButton } from '../DirectionButton';
-import { ItemWindow } from './fragments/ItemWindow';
-import { getComponents } from './utils/getComponents';
+import { DirectionButton } from "../DirectionButton"
+import { ItemWindow } from "./fragments/ItemWindow"
+import { getComponents } from "./utils/getComponents"
 
 const Wrapper = styled.div<{ headline?: string }>`
   ${({ theme: { color }, headline }) => css`
@@ -16,7 +16,7 @@ const Wrapper = styled.div<{ headline?: string }>`
     display: flex;
     justify-content: center;
     ::before {
-      content: '${headline}';
+      content: "${headline}";
       position: absolute;
       top: -2.5rem;
       left: 0;
@@ -25,7 +25,7 @@ const Wrapper = styled.div<{ headline?: string }>`
       font-size: 1.5rem;
     }
   `}
-`;
+`
 
 const CarouselButton = styled.div`
   ${({ theme: { breakpoints } }) => css`
@@ -39,7 +39,7 @@ const CarouselButton = styled.div`
       bottom: -3rem;
     }
   `}
-`;
+`
 
 const RightButton = styled(CarouselButton)`
   ${({ theme: { breakpoints } }) => css`
@@ -48,7 +48,7 @@ const RightButton = styled(CarouselButton)`
       right: 20%;
     }
   `}
-`;
+`
 const LeftButton = styled(CarouselButton)`
   ${({ theme: { breakpoints } }) => css`
     left: -2rem;
@@ -57,9 +57,9 @@ const LeftButton = styled(CarouselButton)`
       left: 20%;
     }
   `}
-`;
+`
 
-const ItemHider = styled.div<{ hide?: 'left' | 'right' }>`
+const ItemHider = styled.div<{ hide?: "left" | "right" }>`
   ${({ hide }) => css`
     transition: 0.5s;
     position: absolute;
@@ -68,32 +68,32 @@ const ItemHider = styled.div<{ hide?: 'left' | 'right' }>`
     justify-content: center;
     width: 100%;
     ${
-      hide === 'left' &&
+      hide === "left" &&
       css`
         transform: translateX(-100%);
       `
     }
     ${
-      hide === 'right' &&
+      hide === "right" &&
       css`
         transform: translateX(100%);
       `
     }}
   `}
-`;
+`
 
 export type CarouselProps = {
-  children: React.ReactElement[];
-};
+  children: React.ReactElement[]
+}
 
 export const Carousel = ({ children }: CarouselProps) => {
-  const [current, setCurrent] = React.useState(0);
-  const items = getComponents(children);
+  const [current, setCurrent] = React.useState(0)
+  const items = getComponents(children)
 
-  const handleChange = (direction: 'left' | 'right') => {
-    if (direction === 'left') setCurrent(current - 1);
-    else setCurrent(current + 1);
-  };
+  const handleChange = (direction: "left" | "right") => {
+    if (direction === "left") setCurrent(current - 1)
+    else setCurrent(current + 1)
+  }
 
   return (
     <Wrapper headline={items[current].headline}>
@@ -110,7 +110,7 @@ export const Carousel = ({ children }: CarouselProps) => {
             key={index}
             aria-hidden={index !== current}
             hide={
-              index < current ? 'left' : index > current ? 'right' : undefined
+              index < current ? "left" : index > current ? "right" : undefined
             }
           >
             {item.content}
@@ -125,5 +125,5 @@ export const Carousel = ({ children }: CarouselProps) => {
         />
       </RightButton>
     </Wrapper>
-  );
-};
+  )
+}

@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { css, keyframes } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css, keyframes } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const hoverAnimation = keyframes`
   from {
@@ -9,12 +7,12 @@ const hoverAnimation = keyframes`
   } to {
     padding: 5% 10%;
   }
-  `;
+  `
 
 const Wrapper = styled.div<DirectionButtonProps>`
-  ${({ theme: { space }, size = 'medium' }) => {
+  ${({ theme: { space }, size = "medium" }) => {
     const width =
-      size === 'small' ? '3rem' : size === 'medium' ? space.xl : space.xxl;
+      size === "small" ? "3rem" : size === "medium" ? space.xl : space.xxl
     return css`
       position: relative;
       display: flex;
@@ -23,9 +21,9 @@ const Wrapper = styled.div<DirectionButtonProps>`
       height: ${width};
       width: ${width};
       transition: 0.5s;
-    `;
+    `
   }}
-`;
+`
 const Seperator = styled.div`
   ${({ theme: { color } }) => css`
     background-color: ${color.dark};
@@ -34,7 +32,7 @@ const Seperator = styled.div`
     height: 25%;
     width: 25%;
   `}
-`;
+`
 
 const ArrowButton = styled.button`
   ${({ theme: { color } }) => css`
@@ -48,7 +46,7 @@ const ArrowButton = styled.button`
     background-color: transparent;
     outline: none;
     ::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
@@ -59,27 +57,27 @@ const ArrowButton = styled.button`
       animation: ${hoverAnimation} 400ms infinite ease-in-out alternate;
     }
   `}
-`;
+`
 const ArrowRight = styled(ArrowButton)`
   left: 50%;
   ::before {
     clip-path: polygon(0 0, 100% 50%, 0 100%, 0 75%, 50% 50%, 0 25%);
   }
-`;
+`
 const ArrowLeft = styled(ArrowButton)`
   right: 50%;
   ::before {
     clip-path: polygon(0 0, 100% 50%, 0 100%, 0 75%, 50% 50%, 0 25%);
     clip-path: polygon(100% 0, 0 50%, 100% 100%, 100% 75%, 50% 50%, 100% 25%);
   }
-`;
+`
 
 export type DirectionButtonProps = {
-  onClick?: (direction: 'left' | 'right') => void;
-  hideLeft?: boolean;
-  hideRight?: boolean;
-  size?: 'small' | 'medium' | 'large';
-};
+  onClick?: (direction: "left" | "right") => void
+  hideLeft?: boolean
+  hideRight?: boolean
+  size?: "small" | "medium" | "large"
+}
 
 export const DirectionButton = ({
   onClick,
@@ -89,7 +87,7 @@ export const DirectionButton = ({
 }: DirectionButtonProps) => (
   <Wrapper size={size}>
     <Seperator />
-    {!hideLeft && <ArrowLeft onClick={() => onClick?.('left')} />}
-    {!hideRight && <ArrowRight onClick={() => onClick?.('right')} />}
+    {!hideLeft && <ArrowLeft onClick={() => onClick?.("left")} />}
+    {!hideRight && <ArrowRight onClick={() => onClick?.("right")} />}
   </Wrapper>
-);
+)

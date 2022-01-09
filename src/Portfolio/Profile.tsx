@@ -1,15 +1,13 @@
-import React from 'react';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import avatar from "../data/media/avatar.png"
 
-import avatar from '../data/media/avatar.png';
-
-const gap = 40;
-const width = 800;
-const height = width / 1.618;
-const textWidth = height - gap * 2;
-const picWidth = width - textWidth - gap * 3;
+const gap = 40
+const width = 800
+const height = width / 1.618
+const textWidth = height - gap * 2
+const picWidth = width - textWidth - gap * 3
 
 const StyledProfile = styled.div`
   ${({ theme: { color, breakpoints, shadow } }) => css`
@@ -32,7 +30,7 @@ const StyledProfile = styled.div`
       width: 100%;
     }
   `}
-`;
+`
 
 const LeftColumn = styled.div`
   ${({ theme: { breakpoints } }) => css`
@@ -51,7 +49,7 @@ const LeftColumn = styled.div`
       }
     }
   `}
-`;
+`
 
 const Picture = styled.img`
   ${({ theme: { color, shadow, breakpoints } }) => css`
@@ -67,7 +65,7 @@ const Picture = styled.img`
       height: unset;
     }
   `}
-`;
+`
 
 const Skills = styled.div`
   ${({ theme: { space } }) => css`
@@ -75,7 +73,7 @@ const Skills = styled.div`
     font-weight: 400;
     line-height: ${space.md};
   `}
-`;
+`
 
 const Text = styled.div`
   ${({ theme: { color, space, breakpoints } }) => css`
@@ -102,14 +100,14 @@ const Text = styled.div`
       }
     }
   `}
-`;
+`
 
 const K = styled.span`
   ${({ theme: { color } }) =>
     css`
       color: ${color.red !== color.dark ? color.red : color.light};
     `};
-`;
+`
 
 export const Profile = () => (
   <StyledProfile>
@@ -126,15 +124,15 @@ export const Profile = () => (
     <Text>
       <h2>About Me</h2>
       <p>
-        I am a 25 year old professional <K>web developer</K> which acquired his{' '}
+        I am a 25 year old professional <K>web developer</K> which acquired his{" "}
         informatics degree in 2020 and is employed since then as a web
         developer.
         <br />
         <br />
-        Most of the time I develop <K>frontend</K> apps with <K>React</K> and{' '}
+        Most of the time I develop <K>frontend</K> apps with <K>React</K> and{" "}
         <K>Typescript</K>, try to <K>design</K> my own stuff and build cool web
         apps while learning new things.
       </p>
     </Text>
   </StyledProfile>
-);
+)

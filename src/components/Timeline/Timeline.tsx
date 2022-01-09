@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
-const bubbleSize = 70;
+const bubbleSize = 70
 
 const Wrapper = styled.div`
   ${({ theme: { shadow } }) => css`
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     width: ${bubbleSize}px;
     filter: drop-shadow(${shadow.small});
   `}
-`;
+`
 const Bubble = styled.div<TimelineProps>`
   ${({ theme: { color: themeColors, space, breakpoints }, color, year }) => css`
     position: sticky;
@@ -29,7 +29,7 @@ const Bubble = styled.div<TimelineProps>`
     border-radius: 50%;
     background-color: ${color};
     ::before {
-      content: '${year}';
+      content: "${year}";
       color: ${themeColors.dark};
       font-weight: 600;
     }
@@ -38,27 +38,27 @@ const Bubble = styled.div<TimelineProps>`
       top: 5rem;
     }
   `}
-`;
-const Line = styled.div<Pick<TimelineProps, 'color'>>`
+`
+const Line = styled.div<Pick<TimelineProps, "color">>`
   ${({ color }) => css`
     margin: 0 auto;
     height: calc(100% - ${bubbleSize}px);
     background-color: ${color};
     width: 4px;
   `}
-`;
+`
 const StyledTimeline = styled.div`
   ${({ theme: { space } }) => css`
     position: relative;
     margin-bottom: ${space.md};
     padding-top: ${bubbleSize / 2}px;
   `}
-`;
+`
 
 type TimelineProps = {
-  year: number;
-  color: string;
-};
+  year: number
+  color: string
+}
 export const Timeline = ({
   year,
   color,
@@ -71,4 +71,4 @@ export const Timeline = ({
     </Wrapper>
     {children}
   </StyledTimeline>
-);
+)

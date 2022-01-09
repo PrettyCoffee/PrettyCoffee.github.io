@@ -1,10 +1,8 @@
-import React from 'react';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-
-import { Carousel, CarouselItem } from '../../components';
-import { ShadowPlay } from './ShadowPlay';
+import { Carousel, CarouselItem } from "../../components"
+import { ShadowPlay } from "./ShadowPlay"
 
 const Text = styled.div`
   ${({ theme: { color } }) => css`
@@ -15,7 +13,7 @@ const Text = styled.div`
     font-weight: 400;
     max-width: 300px;
   `}
-`;
+`
 
 export const Playground = () => {
   return (
@@ -37,5 +35,5 @@ export const Playground = () => {
         <ShadowPlay />
       </CarouselItem>
     </Carousel>
-  );
-};
+  )
+}

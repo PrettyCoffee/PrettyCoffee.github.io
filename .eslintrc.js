@@ -1,62 +1,83 @@
-// Source: https://davidltran.com/blog/cra-ts-eslint-prettier-quick-start/
+const baseConfigs = [
+  "eslint:recommended",
+  "plugin:@typescript-eslint/eslint-recommended",
+  "plugin:import/recommended",
+  "plugin:import/typescript",
+  "plugin:react-hooks/recommended",
+  "plugin:jsx-a11y/recommended",
+  "plugin:react/recommended",
+  "plugin:react/jsx-runtime",
+  "plugin:prettier/recommended",
+]
+
+const plugins = [
+  "@emotion",
+  "@typescript-eslint",
+  "import",
+  "react",
+  "unused-imports",
+  "jsx-a11y",
+]
+
+const prettierRules = {
+  tabWidth: 2,
+  singleQuote: false,
+  trailingComma: "es5",
+  semi: false,
+  bracketSpacing: true,
+  arrowParens: "avoid",
+  endOfLine: "auto",
+  jsxSingleQuote: false,
+}
+
+const importOrderRules = {
+  groups: ["builtin", "external", "internal"],
+  pathGroups: [
+    {
+      pattern: "react",
+      group: "external",
+      position: "before",
+    },
+  ],
+  pathGroupsExcludedImportTypes: ["react"],
+  "newlines-between": "always",
+  alphabetize: {
+    order: "asc",
+    caseInsensitive: true,
+  },
+}
 
 module.exports = {
+  parser: "@typescript-eslint/parser",
   env: {
-    browser: true, // Allows for the use of predefined global variables for browsers (document, window, etc.)
-    jest: true, // Allows for the use of predefined global variables for Jest (describe, test, etc.)
-    node: true, // Allows for the use of predefined global variables for Node.js (module, process, etc.)
+    node: true,
   },
-  extends: [
-    'react-app', // Use the recommended rules from eslint-config-react-app (bundled with Create React App)
-    'eslint:recommended', // Use the recommened rules from eslint
-    'plugin:@typescript-eslint/recommended', // Use the recommended rules from @typescript-eslint/eslint-plugin
-    'plugin:react/recommended', // Use the recommended rules from eslint-plugin-react
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier to display Prettier errors as ESLint errors
-  ],
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: 2020,
     ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX
+      legacyDecorators: true,
+      jsx: true,
     },
-    sourceType: 'module', // Allows for the use of imports
   },
-  plugins: [
-    '@typescript-eslint', // Allows for manually setting @typescript-eslint/* rules
-    'prettier', // Allows for manually setting prettier/* rules
-    'react', // Allows for manually setting react/* rules
-    'import',
-    '@emotion',
-  ],
+  extends: baseConfigs,
+  plugins: plugins,
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal'],
-        pathGroups: [
-          {
-            pattern: 'react',
-            group: 'external',
-            position: 'before',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['react'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
+    "@emotion/syntax-preference": [2, "string"],
+    "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "jsx-a11y/no-onchange": "off", // deprecated rule, will be deleted in a future release
+    "jsx-a11y/no-autofocus": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+
+    "import/order": ["error", importOrderRules],
+    "prettier/prettier": ["error", prettierRules],
   },
   settings: {
     react: {
-      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: "detect",
     },
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
   },
-};
+}

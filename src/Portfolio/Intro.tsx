@@ -1,9 +1,7 @@
-import React from 'react';
+import styled from "@emotion/styled"
 
-import styled from '@emotion/styled';
-
-import { Typer } from '../components';
-import { Animation } from './Animation';
+import { Typer } from "../components"
+import { Animation } from "./Animation"
 
 const TyperContainer = styled.div`
   width: 500px;
@@ -14,7 +12,7 @@ const TyperContainer = styled.div`
     margin: 0 auto;
   }
   margin: 0 auto;
-`;
+`
 
 export const Intro = () => (
   <>
@@ -23,14 +21,14 @@ export const Intro = () => (
       <Typer
         text={`Welcome to my \n`}
         textCarousel={[
-          'portfolio',
-          'passion',
-          'hobby',
-          'project',
-          'playground',
+          "portfolio",
+          "passion",
+          "hobby",
+          "project",
+          "playground",
         ]}
         timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 2000 }}
       />
     </TyperContainer>
   </>
-);
+)

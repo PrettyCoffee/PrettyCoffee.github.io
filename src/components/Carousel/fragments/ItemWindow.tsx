@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const Wrapper = styled.div`
   position: relative;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-`;
+`
 
 const Decorator = styled.div`
   position: absolute;
@@ -19,7 +19,7 @@ const Decorator = styled.div`
   left: 0;
   right: 0;
   opacity: 0.7;
-`;
+`
 
 const TopDecorator = styled(Decorator)`
   ${({ theme: { color } }) => css`
@@ -27,7 +27,7 @@ const TopDecorator = styled(Decorator)`
     box-shadow: 0 0.2rem 0 ${color.dark} inset, 0.2rem 0 0 ${color.dark} inset,
       -0.2rem 0 0 ${color.dark} inset;
   `}
-`;
+`
 const BottomDecorator = styled(Decorator)`
   ${({ theme: { color } }) => css`
     display: flex;
@@ -37,7 +37,7 @@ const BottomDecorator = styled(Decorator)`
       -0.2rem 0 0 ${color.dark} inset;
 
     ::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -0.4rem;
       width: 5rem;
@@ -53,7 +53,7 @@ const BottomDecorator = styled(Decorator)`
       );
     }
   `}
-`;
+`
 
 export const ItemWindow = ({ children }: React.PropsWithChildren<unknown>) => (
   <>
@@ -61,4 +61,4 @@ export const ItemWindow = ({ children }: React.PropsWithChildren<unknown>) => (
     <Wrapper>{children}</Wrapper>
     <BottomDecorator />
   </>
-);
+)

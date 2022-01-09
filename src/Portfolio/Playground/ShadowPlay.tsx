@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const Animations = styled.div`
   display: grid;
@@ -11,7 +9,7 @@ const Animations = styled.div`
     align-self: center;
     justify-self: center;
   }
-`;
+`
 
 const Square = styled.div`
   ${({ theme: { color } }) => css`
@@ -23,7 +21,7 @@ const Square = styled.div`
     ::after,
     ::before {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       border-radius: 0.5rem;
       width: 1rem;
@@ -80,7 +78,7 @@ const Square = styled.div`
       }
     }
   `}
-`;
+`
 const FillingSquare = styled.div`
   position: relative;
   width: 4rem;
@@ -89,11 +87,11 @@ const FillingSquare = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 const SquareFill = styled.div`
   ${({ theme: { color } }) => css`
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     border-radius: 0.3rem;
     box-shadow: -0.2rem 0.2rem 0.4rem ${color.grey}, 0.1rem -0.1rem 0.2rem white,
@@ -132,14 +130,14 @@ const SquareFill = styled.div`
       }
     }
   `}
-`;
+`
 
 const Waves = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Wave = styled.div`
   ${({ theme: { color } }) => css`
@@ -228,7 +226,7 @@ const Wave = styled.div`
       }
     }
   `}
-`;
+`
 
 const Balls = styled.div`
   position: relative;
@@ -239,7 +237,7 @@ const Balls = styled.div`
   > * {
     justify-self: center;
   }
-`;
+`
 const LoadingBar = styled.div`
   ${({ theme: { color } }) => css`
     border-radius: 0.5rem;
@@ -279,7 +277,7 @@ const LoadingBar = styled.div`
       }
     }
   `}
-`;
+`
 
 const BouncingBall = styled.div`
   ${({ theme: { color } }) => css`
@@ -321,11 +319,11 @@ const BouncingBall = styled.div`
       }
     }
   `}
-`;
+`
 
 const SpinningBalls = styled.div`
   ${({ theme: { color } }) => {
-    const easing = 'cubic-bezier(0.65, -0.45, 0.35, 1.45)';
+    const easing = "cubic-bezier(0.65, -0.45, 0.35, 1.45)"
     return css`
       position: relative;
       display: flex;
@@ -336,7 +334,7 @@ const SpinningBalls = styled.div`
 
       ::before,
       ::after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 1;
         width: 1rem;
@@ -374,9 +372,9 @@ const SpinningBalls = styled.div`
           transform: rotate(-315deg);
         }
       }
-    `;
+    `
   }}
-`;
+`
 
 export const ShadowPlay = () => {
   return (
@@ -407,5 +405,5 @@ export const ShadowPlay = () => {
       <SpinningBalls />
       <Square />
     </Animations>
-  );
-};
+  )
+}

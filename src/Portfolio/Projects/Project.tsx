@@ -1,13 +1,11 @@
-import React from 'react';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faEye } from "@fortawesome/free-regular-svg-icons"
+import { faBook } from "@fortawesome/free-solid-svg-icons"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEye } from '@fortawesome/free-regular-svg-icons';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-
-import { Button } from '../../components';
-import { Project as ProjectProps } from '../../data/projects';
+import { Button } from "../../components"
+import { Project as ProjectProps } from "../../data/projects"
 
 const StyledProject = styled.div`
   ${({ theme: { breakpoints } }) => css`
@@ -21,7 +19,7 @@ const StyledProject = styled.div`
       position: relative;
     }
   `}
-`;
+`
 
 const ProjectAvatar = styled.img`
   ${({ theme: { color, shadow, breakpoints, space } }) => css`
@@ -38,7 +36,7 @@ const ProjectAvatar = styled.img`
       margin-top: ${space.xl};
     }
   `}
-`;
+`
 
 const Description = styled.div`
   ${({ theme: { space, shadow, color } }) => css`
@@ -52,7 +50,7 @@ const Description = styled.div`
       font-weight: 500;
     }
   `}
-`;
+`
 const ButtonRow = styled.div`
   ${({ theme: { space } }) => css`
     text-align: right;
@@ -60,7 +58,7 @@ const ButtonRow = styled.div`
       margin-left: ${space.sm};
     }
   `}
-`;
+`
 
 export const Project = ({
   title,
@@ -99,4 +97,4 @@ export const Project = ({
       </ButtonRow>
     </Description>
   </StyledProject>
-);
+)

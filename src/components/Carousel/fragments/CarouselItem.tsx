@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react"
 
 export type CarouselItemProps = {
-  headline?: string;
-};
+  headline?: string
+}
 
 export const CarouselItem = ({
   children,
-}: React.PropsWithChildren<CarouselItemProps>) => <>{children}</>;
+}: React.PropsWithChildren<CarouselItemProps>) => <>{children}</>

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled"
 
 export const ScrollspyMenu = styled.div`
   display: flex;
@@ -6,4 +6,4 @@ export const ScrollspyMenu = styled.div`
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: row;
   }
-`;
+`

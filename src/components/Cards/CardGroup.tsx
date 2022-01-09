@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 export const CardGroup = styled.div`
   ${({ theme: { breakpoints, space } }) =>
@@ -15,13 +15,13 @@ export const CardGroup = styled.div`
         > a {
           height: 6.4rem;
           width: 9rem;
-          > [datatype='text'] {
+          > [datatype="text"] {
             font-size: ${space.sm};
           }
-          > [datatype='icon'] {
+          > [datatype="icon"] {
             font-size: 3rem;
           }
         }
       }
     `}
-`;
+`

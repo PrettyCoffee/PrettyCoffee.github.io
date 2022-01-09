@@ -1,11 +1,9 @@
-import React from 'react';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const WIDTH = '8rem';
+const WIDTH = "8rem"
 
 const StyledMenuItem = styled.button<{ active: boolean }>`
   ${({ theme: { color, space, animation, breakpoints }, active }) => css`
@@ -101,14 +99,14 @@ const StyledMenuItem = styled.button<{ active: boolean }>`
       `}
     }
   `}
-`;
+`
 
 type ScrollspyMenuItemProps = {
-  icon: IconDefinition;
-  label: string;
-  active: boolean;
-  onClick: () => void;
-};
+  icon: IconDefinition
+  label: string
+  active: boolean
+  onClick: () => void
+}
 
 export const ScrollspyMenuItem = ({
   icon,
@@ -119,4 +117,4 @@ export const ScrollspyMenuItem = ({
     <FontAwesomeIcon icon={icon} />
     <span>{label}</span>
   </StyledMenuItem>
-);
+)

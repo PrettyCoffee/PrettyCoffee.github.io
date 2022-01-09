@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const StyledSection = styled.section<{ bgcolor?: string }>`
   ${({ theme: { color, breakpoints }, bgcolor = color.dark }) => css`
@@ -22,15 +22,15 @@ const StyledSection = styled.section<{ bgcolor?: string }>`
       padding-right: 20px;
     }
   `}
-`;
+`
 
 type SectionProps = {
-  bgcolor?: string;
-};
+  bgcolor?: string
+}
 
 export const Section = ({
   children,
   ...props
 }: React.PropsWithChildren<SectionProps>) => {
-  return <StyledSection {...props}>{children}</StyledSection>;
-};
+  return <StyledSection {...props}>{children}</StyledSection>
+}
