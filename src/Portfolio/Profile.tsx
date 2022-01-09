@@ -120,9 +120,7 @@ export const Profile = () => (
         <br />
         German | English
         <br />
-        <K>Skills:</K> CSS, TypeScript, React
-        <br />
-        <K>Learning:</K> Hooks, Redux, Animation
+        <K>Skills:</K> CSS, TypeScript, React, Redux, Web Design
       </Skills>
     </LeftColumn>
     <Text>

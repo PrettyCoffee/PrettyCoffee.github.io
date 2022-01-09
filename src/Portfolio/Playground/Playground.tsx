@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { Carousel, CarouselItem } from '../../components';
 import { ShadowPlay } from './ShadowPlay';
 
-const Test = styled.p`
+const Text = styled.div`
   ${({ theme: { color } }) => css`
     color: ${color.dark};
     > h3 {
@@ -21,7 +21,7 @@ export const Playground = () => {
   return (
     <Carousel>
       <CarouselItem headline="Work in progress">
-        <Test>
+        <Text>
           <h3>
             I couldnt think of a fitting text yet, take this cat ipsum instead:
           </h3>
@@ -31,7 +31,7 @@ export const Playground = () => {
           blinds. Take a big fluffing crap 💩 purr sleep all day whilst slave is
           at work, play all night whilst slave is sleeping and run at 3am yet
           purr.
-        </Test>
+        </Text>
       </CarouselItem>
       <CarouselItem headline="Playing with shadows">
         <ShadowPlay />
