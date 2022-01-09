@@ -40,7 +40,7 @@ export const projects: Year[] = [
       {
         title: "Yet another generic startpage",
         description:
-          "The fourth startpage in the list, demostrating the usage of the @startpage library.",
+          "The fourth startpage in the list, demonstrating the usage of the @startpage library.",
         image: gnrc,
         repoUrl:
           "https://github.com/PrettyCoffee/yet-another-generic-startpage",
