@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 import { Button } from '../../components';
 import { Project as ProjectProps } from '../../data/projects';
@@ -66,6 +67,7 @@ export const Project = ({
   description,
   demoUrl,
   repoUrl,
+  docsUrl,
   image,
 }: ProjectProps) => (
   <StyledProject>
@@ -82,6 +84,11 @@ export const Project = ({
         {demoUrl && (
           <a href={demoUrl} target="_blank" rel="noreferrer">
             <Button icon={faEye}>Demo</Button>
+          </a>
+        )}
+        {docsUrl && (
+          <a href={docsUrl} target="_blank" rel="noreferrer">
+            <Button icon={faBook}>Docs</Button>
           </a>
         )}
       </ButtonRow>
