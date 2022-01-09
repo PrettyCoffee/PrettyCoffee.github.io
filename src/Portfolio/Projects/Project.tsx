@@ -56,7 +56,7 @@ const Description = styled.div`
 const ButtonRow = styled.div`
   ${({ theme: { space } }) => css`
     text-align: right;
-    > a:nth-child(2) {
+    > a:nth-of-type(2) {
       margin-left: ${space.sm};
     }
   `}
@@ -77,19 +77,24 @@ export const Project = ({
       <p>{description}</p>
       <ButtonRow>
         {repoUrl && (
-          <a href={repoUrl} target="_blank" rel="noreferrer">
-            <Button icon={faGithub}>Repo</Button>
-          </a>
+          <Button
+            href={repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            icon={faGithub}
+          >
+            Repo
+          </Button>
         )}
         {demoUrl && (
-          <a href={demoUrl} target="_blank" rel="noreferrer">
-            <Button icon={faEye}>Demo</Button>
-          </a>
+          <Button href={demoUrl} target="_blank" rel="noreferrer" icon={faEye}>
+            Demo
+          </Button>
         )}
         {docsUrl && (
-          <a href={docsUrl} target="_blank" rel="noreferrer">
-            <Button icon={faBook}>Docs</Button>
-          </a>
+          <Button href={docsUrl} target="_blank" rel="noreferrer" icon={faBook}>
+            Docs
+          </Button>
         )}
       </ButtonRow>
     </Description>
