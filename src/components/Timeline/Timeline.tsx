@@ -5,35 +5,46 @@ import styled from '@emotion/styled';
 
 const bubbleSize = 70;
 
-const Bubble = styled.div<TimelineProps>`
-  ${({ theme: { color: themeColors, shadow }, color, year }) => css`
+const Wrapper = styled.div`
+  ${({ theme: { shadow } }) => css`
     position: absolute;
+    right: -100px;
+    top: 0;
+    height: 100%;
+    width: ${bubbleSize}px;
+    filter: drop-shadow(${shadow.small});
+  `}
+`;
+const Bubble = styled.div<TimelineProps>`
+  ${({ theme: { color: themeColors, space, breakpoints }, color, year }) => css`
+    position: sticky;
+    top: ${space.xs};
+    height: ${bubbleSize}px;
+    width: ${bubbleSize}px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    right: -100px;
-    top: 0;
-    height: ${bubbleSize}px;
-    width: ${bubbleSize}px;
-    border-radius: ${bubbleSize / 2}px;
+
+    border-radius: 50%;
     background-color: ${color};
-    box-shadow: ${shadow.small};
     ::before {
       content: '${year}';
       color: ${themeColors.dark};
       font-weight: 600;
     }
+
+    ${breakpoints.mobile} {
+      top: 5rem;
+    }
   `}
 `;
 const Line = styled.div<Pick<TimelineProps, 'color'>>`
-  ${({ theme: { shadow }, color }) => css`
-    position: absolute;
-    top: ${bubbleSize}px;
-    right: -${102 - bubbleSize / 2}px;
+  ${({ color }) => css`
+    margin: 0 auto;
     height: calc(100% - ${bubbleSize}px);
     background-color: ${color};
     width: 4px;
-    box-shadow: ${shadow.small};
   `}
 `;
 const StyledTimeline = styled.div`
@@ -54,8 +65,10 @@ export const Timeline = ({
   children,
 }: React.PropsWithChildren<TimelineProps>) => (
   <StyledTimeline>
-    <Bubble color={color} year={year} />
-    <Line color={color} />
+    <Wrapper>
+      <Bubble color={color} year={year} />
+      <Line color={color} />
+    </Wrapper>
     {children}
   </StyledTimeline>
 );
