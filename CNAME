@@ -1,1 +1,4 @@
-prettycoffee.dev
+prettycoffee.dev     3600    IN AAAA     2606:50c0:8000::153
+prettycoffee.dev     3600    IN AAAA     2606:50c0:8001::153
+prettycoffee.dev     3600    IN AAAA     2606:50c0:8002::153
+prettycoffee.dev     3600    IN AAAA     2606:50c0:8003::153
