@@ -1,9 +1,11 @@
 import { getTheme } from "../components"
 import avatar from "./media/avatar.png"
+import cookie from "./media/cookie.png"
 import fluidity from "./media/fluidity.svg"
 import gnrc from "./media/gnrc.png"
 import goAudio from "./media/go-audio.png"
 import kitty from "./media/kitty.png"
+import missing from "./media/missing-pic.png"
 import stpg from "./media/react-startpage.svg"
 import smug from "./media/smug.jpg"
 
@@ -37,6 +39,20 @@ export const projects: Year[] = [
     year: 2022,
     color: color.orange,
     projects: [
+      {
+        title: "[WIP] - MiniguePT (Frontend)",
+        description:
+          "Web chat client for MiniguePT, a chatbot created by a lovely friend <3 \nThis is also my first SolidJs project.",
+        image: missing,
+        repoUrl: "https://github.com/Eeeeelias/miniguept-chat",
+      },
+      {
+        title: "[WIP] - Cookie Credit Card",
+        description:
+          "My first fullstack web app that helps keeping track of your cookie debts. For a colleague to whom I owe some cookies. A lot actually.",
+        image: cookie,
+        repoUrl: "https://github.com/PrettyCoffee/cookie-credit-card",
+      },
       {
         title: "Yet another generic startpage",
         description:

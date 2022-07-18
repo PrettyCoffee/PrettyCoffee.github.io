@@ -60,6 +60,10 @@ const ButtonRow = styled.div`
   `}
 `
 
+const Paragraph = styled.p`
+  white-space: break-spaces;
+`
+
 export const Project = ({
   title,
   description,
@@ -72,7 +76,7 @@ export const Project = ({
     <ProjectAvatar src={image} />
     <Description>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <Paragraph>{description}</Paragraph>
       <ButtonRow>
         {repoUrl && (
           <Button
