@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.3e846d13.js",
-    "static/js/787.2b6c8f91.chunk.js": "/static/js/787.2b6c8f91.chunk.js",
+    "main.js": "/static/js/main.dee8fb66.js",
+    "static/js/787.26c90424.chunk.js": "/static/js/787.26c90424.chunk.js",
     "static/media/kitty.png": "/static/media/kitty.4387a5b982e94311f550.png",
+    "static/media/cookie.png": "/static/media/cookie.667d45483df0a530b688.png",
     "static/media/go-audio.png": "/static/media/go-audio.76d6a55b28b8e310b325.png",
     "static/media/logo.png": "/static/media/logo.36cd3488aa1c504d1d84.png",
     "static/media/avatar.png": "/static/media/avatar.fa89cc505c821cc0a71a.png",
+    "static/media/missing-pic.png": "/static/media/missing-pic.c9afaf8309419f6bebc6.png",
     "static/media/computer.svg": "/static/media/computer.ba55b973926c3c2bf8ef2b7a37a3927b.svg",
     "static/media/smug.jpg": "/static/media/smug.9792ee4a273a7251f3d9.jpg",
     "static/media/react-startpage.svg": "/static/media/react-startpage.95e85efcc9af71ea143779d9044464d8.svg",
@@ -13,10 +15,10 @@
     "static/media/smartphone.svg": "/static/media/smartphone.e18b1faa66785d8107b42c211ba595dc.svg",
     "static/media/fluidity.svg": "/static/media/fluidity.09f4c13427dd0bbbb18b7f3e4807c699.svg",
     "index.html": "/index.html",
-    "main.3e846d13.js.map": "/static/js/main.3e846d13.js.map",
-    "787.2b6c8f91.chunk.js.map": "/static/js/787.2b6c8f91.chunk.js.map"
+    "main.dee8fb66.js.map": "/static/js/main.dee8fb66.js.map",
+    "787.26c90424.chunk.js.map": "/static/js/787.26c90424.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3e846d13.js"
+    "static/js/main.dee8fb66.js"
   ]
 }
