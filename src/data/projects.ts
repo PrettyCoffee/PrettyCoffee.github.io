@@ -1,13 +1,13 @@
 import { getTheme } from "../components"
-import avatar from "./media/avatar.png"
-import cookie from "./media/cookie.png"
+import avatar from "./media/avatar.webp"
+import cookie from "./media/cookie.webp"
 import fluidity from "./media/fluidity.svg"
-import gnrc from "./media/gnrc.png"
-import goAudio from "./media/go-audio.png"
-import kitty from "./media/kitty.png"
-import minigue from "./media/minigue.png"
+import gnrc from "./media/gnrc.webp"
+import goAudio from "./media/go-audio.webp"
+import kitty from "./media/kitty.webp"
+import minigue from "./media/minigue.webp"
 import stpg from "./media/react-startpage.svg"
-import smug from "./media/smug.jpg"
+import smug from "./media/smug.webp"
 
 const { color } = getTheme()
 

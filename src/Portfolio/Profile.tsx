@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 
-import avatar from "../data/media/avatar.png"
+import avatar from "../data/media/avatar.webp"
 
 const gap = 40
 const width = 800

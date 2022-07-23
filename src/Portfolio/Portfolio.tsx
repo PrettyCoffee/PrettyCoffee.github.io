@@ -14,7 +14,7 @@ import {
   ScrollspyContent,
   Section,
 } from "../components"
-import logo from "../data/media/logo.png"
+import logo from "../data/media/logo.webp"
 import { Intro } from "./Intro"
 import { Playground } from "./Playground/Playground"
 import { Profile } from "./Profile"
