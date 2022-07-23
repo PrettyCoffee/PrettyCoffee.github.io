@@ -11,7 +11,6 @@ import { getTheme } from "./getTheme"
 const { color } = getTheme()
 
 const globalStyles = css`
-  @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
   ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
